@@ -11,11 +11,11 @@ export class RegistrationService {
   constructor(private _http: HttpClient) { }
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
-    return this._http.post<any>("lo",patient);
+    return this._http.post<any>("http://localhost:8080/login",patient);
   }
 
   public registerUserFromRemote(patient: Patient):Observable<any>{
-    return this._http.post<any>("lo",patient);
+    return this._http.post<any>("http://localhost:8080/registration",patient);
   }
   
 }

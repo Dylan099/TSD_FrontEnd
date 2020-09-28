@@ -49,6 +49,15 @@
             <small class = "text-danger" [class.d-none]="userName.valid || userName.untouched">User Name is required field</small>
         </div>
 
+        <!--PASSWORD-->
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control"  placeholder="Password" name="password" [(ngModel)]="patient.Password" #password="ngModel" required
+            [class.is-invalid]="password.invalid && password.touched"
+            >
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+          </div>
+
         <button type="submit" class="btn btn-info">Register</button>
         <small class="float-right btextual" [routerLink]="['/login']">Login Here </small>
     </form>
