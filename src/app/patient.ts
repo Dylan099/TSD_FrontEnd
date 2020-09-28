@@ -4,7 +4,7 @@ export class Patient {
     LastName:string;
     Ci:number;
     LastStatus:string;
-    email:string;
+    correo:string;
     UserName:string;
     Password:string;
     IdDoctor:number;

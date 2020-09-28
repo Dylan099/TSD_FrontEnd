@@ -9,7 +9,7 @@
     <small class="text-danger">{{msg}}</small>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name= "email" [(ngModel)]="patient.email" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name= "email" [(ngModel)]="patient.correo" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
       #email="ngModel"
       [class.is-invalid]="email.invalid && email.touched"
       >
@@ -26,7 +26,8 @@
       >
       <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
     </div>
-    <button type="submit" class="btn btn-info">Submit</button>
+
+    <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info">Submit</button>
   
   <small class="float-right" [routerLink]="['/registration']">Register</small>
 </form>
