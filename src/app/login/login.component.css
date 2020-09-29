@@ -16,9 +16,51 @@ body {
   
   .header__img {
     margin-left: 30px;
-    width: 200px;
+    width: 70px;
+  }
+  .header__menu {
+    margin-right: 30px;
   }
   
+  .header__menu ul {
+    display: none;
+    list-style: none;
+    margin: 0px 0px 0px -14px;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+  }
+  
+  .header__menu:hover ul, ul:hover {
+    display: block;
+  }
+  
+  .header__menu li {
+    margin: 10px 0px;
+  }
+  
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header__menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .header__menu--profile {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+  }
+  
+
   .login {
     background-image: linear-gradient(#0093E9, #80D0C7);
     display: flex;
@@ -30,7 +72,7 @@ body {
   }
   
   .login__container {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,0.1,0.1,0.1);
     border: 2px solid white;
     border-radius: 40px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
