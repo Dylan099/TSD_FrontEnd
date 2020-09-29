@@ -25,7 +25,7 @@
       <h2>Iniciar sesión</h2>
       <form class="login__container--form" #loginform="ngForm" (ngSubmit)="loginUser()">
         <small class="text-danger">{{msg}}</small>
-        <input class="input" type="email" placeholder="Correo"  name= "email" [(ngModel)]="patient.correo" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        <input class="input" type="email" placeholder="Correo"  name= "email" [(ngModel)]="patient.correo" required pattern="\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
         #email="ngModel"
         [class.is-invalid]="email.invalid && email.touched">
         <div *ngIf="email.errors && (email.invalid && email.touched)">
