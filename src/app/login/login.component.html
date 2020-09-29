@@ -1,35 +1,39 @@
-<div style="min-width: 100%; min-height:200%;background-color:rgb(177, 174, 174)">
-<br>
-<div class="container" style="max-width: 600px; background-color:rgb(233, 211, 183);">
-<h2>
-    Log In
-</h2>
-
-<form #loginform="ngForm" (ngSubmit)="loginUser()">
-    <small class="text-danger">{{msg}}</small>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name= "email" [(ngModel)]="patient.correo" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      #email="ngModel"
-      [class.is-invalid]="email.invalid && email.touched"
-      >
-     
-      <div *ngIf="email.errors && (email.invalid && email.touched)">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
+<body>
+  <header class="header">
+    <img class="header__img" src="../Assets/hospital.png" alt="Img doctor">
+  </header>
+  <section class="login">
+    <section class="login__container">
+      <h2>Iniciar sesión</h2>
+      <form class="login__container--form" #loginform="ngForm" (ngSubmit)="loginUser()">
+        <small class="text-danger">{{msg}}</small>
+        <input class="input" type="email" placeholder="Correo"  name= "email" [(ngModel)]="patient.correo" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
           <small class="text-danger" *ngIf="email.errors.required">Email is required field</small>
           <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid value of email</small>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control"  placeholder="Password" name="password" [(ngModel)]="patient.Password" #password="ngModel" required
-      [class.is-invalid]="password.invalid && password.touched"
-      >
-      <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
-    </div>
-
-    <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info">Submit</button>
-  
-  <small class="float-right" [routerLink]="['/registration']">Register</small>
-</form>
-</div>
-</div>
+        </div>
+        <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="patient.Password" #password="ngModel" required
+        [class.is-invalid]="password.invalid && password.touched">
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+        <button [disabled]="loginform.form.invalid" type="submit" class="button">Iniciar sesion</button>
+      </form>
+      <p class="login__container--register">No tienes ninguna cuenta <a [routerLink]="['/registration']">Regístrate</a></p>
+    </section>
+  </section>
+  <footer class="footer">
+    <a href="/">Terminos de uso</a>
+    <a href="/">Declaración de privacidad</a>
+    <a href="/">Centro de ayuda</a>
+  </footer>
+</body>
+</html>
