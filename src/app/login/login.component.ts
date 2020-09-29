@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   loginUser(){
     this._service.loginUserFromRemote(this.patient).subscribe(
       data => {
+        
         console.log("response recieved");
         this._router.navigate(['/loginsuccess'])
       },
