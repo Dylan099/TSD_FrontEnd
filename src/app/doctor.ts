@@ -5,7 +5,7 @@ export class Doctor {
     ci: number;
     correo: string;
     username: string;
-    password: string;
+    pass: string;
     constructor(){
 
     }

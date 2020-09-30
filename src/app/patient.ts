@@ -6,7 +6,7 @@ export class Patient {
     lastStatus:string;
     correo:string;
     username:string;
-    password:string;
+    pass:string;
     idDoctor:number;
     constructor(){
         
