@@ -13,6 +13,8 @@ import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
