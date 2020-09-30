@@ -22,7 +22,7 @@ export class RegisdoctComponent implements OnInit {
     this._service.registerDoctorFromRemote(this.doctor).subscribe(
       data => {
         console.log("response recieved");
-        this._router.navigate(['/doctor-view'])
+        this._router.navigate(['/logindoctor'])
       },
       error =>{
          console.log("exception ocurred");
