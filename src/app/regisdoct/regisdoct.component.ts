@@ -17,6 +17,7 @@ export class RegisdoctComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   registerDoctor(){
     this._service.registerDoctorFromRemote(this.doctor).subscribe(
       data => {

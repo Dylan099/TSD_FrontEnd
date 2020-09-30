@@ -31,8 +31,4 @@ export class LoginComponent implements OnInit {
         }
     );
   }
-  goregistration(){
-    this._router.navigate(['/registration'])
-  }
-
 }

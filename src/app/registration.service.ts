@@ -19,7 +19,7 @@ export class RegistrationService {
     return this._http.post<any>("http://localhost:8080/registration",patient);
   }
   public registerDoctorFromRemote(doctor: Doctor):Observable<any>{
-    return this._http.post<any>("http://localhost:8080/regisdoct",doctor);
+    return this._http.post<any>("",doctor);
   }
   
 }

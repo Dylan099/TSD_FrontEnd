@@ -21,13 +21,13 @@ const routes: Routes = [
     component:RegistrationComponent 
   },
   {
-    path:'login',
-    component:LoginComponent
+    path:'regisdoct',
+    component: RegisdoctComponent
   },
   {
-    path:'regisdoc',
-    component: RegisdoctComponent
-  }
+    path:'login',
+    component:LoginComponent
+  }  
 ];
 
 @NgModule({
