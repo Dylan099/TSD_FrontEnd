@@ -1,0 +1,28 @@
+<div align="center">
+    <h1 >Lista de Pacientes</h1>
+    <hr>
+    
+      <table id="myTable" class="table table-striped">
+        <thead>
+           <tr>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">CI</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Username</th>
+           </tr>
+        </thead>
+        <tbody *ngFor="let p of listpatient">
+               <td>{{p.firstName}}</td>
+               <td>{{p.lastName}}</td>
+               <td>{{p.ci}}</td>
+               <td>{{p.lastStatus}}</td>
+               <td>{{p.correo}}</td>
+               <td>{{p.username}}</td>
+        </tbody>
+     </table> 
+</div>
+
+
+

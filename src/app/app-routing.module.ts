@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+import { ListPatientComponent } from './list-patient/list-patient.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { LoginComponent } from './login/login.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path:'subscription',
     component:SubscriptionComponent
+  },
+  {
+    path:'listpatient',
+    component:ListPatientComponent
   }
 ];
 

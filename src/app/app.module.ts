@@ -12,6 +12,7 @@ import { RegisdoctComponent } from './regisdoct/regisdoct.component';
 import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { ListPatientComponent } from './list-patient/list-patient.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SubscriptionComponent } from './subscription/subscription.component';
     RegisdoctComponent,
     DoctorViewComponent,
     LoginDoctorComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    ListPatientComponent
   ],
   imports: [
     BrowserModule,

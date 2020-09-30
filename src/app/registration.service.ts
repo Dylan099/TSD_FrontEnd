@@ -11,6 +11,7 @@ import { Subscrition } from './subscrition';
 export class RegistrationService {
 
   constructor(private _http: HttpClient) { }
+  URL = "http://localhost:8080/listpatient";
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
@@ -26,6 +27,9 @@ export class RegistrationService {
   }
   public subscriptionFromRemote(subscrition: Subscrition):Observable<any>{
     return this._http.post<any>("http://localhost:8080/subscription",subscrition);
+  }
+  listPatientGetFromRemote(){
+    return this._http.get<Patient[]>(this.URL);
   }
   
 }
