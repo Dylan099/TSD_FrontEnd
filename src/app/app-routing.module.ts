@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { LoginComponent } from './login/login.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
@@ -27,7 +29,15 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
-  }  
+  },
+  {
+    path:'doctorview',
+    component:DoctorViewComponent
+  },
+  {
+    path:'logindoctor',
+    component:LoginDoctorComponent
+  }
 ];
 
 @NgModule({

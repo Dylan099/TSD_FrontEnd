@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -21,7 +22,6 @@ export class LoginComponent implements OnInit {
   loginUser(){
     this._service.loginUserFromRemote(this.patient).subscribe(
       data => {
-        
         console.log("response recieved");
         this._router.navigate(['/loginsuccess'])
       },

@@ -42,9 +42,9 @@
                 <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="doctor.Password" #password="ngModel" required
                 [class.is-invalid]="password.invalid && password.touched">
                 <small class="text-danger" [class.d-none]="password.valid || password.untouched">Debe ingresar una contraseña</small>
-                <button class="button">Registrarme</button>
+                <button class="button"[routerLink]="['/logindoctor']">Registrarme</button>
             </form>
-            <a [routerLink]="['/login']">Iniciar sesión</a>
+            <a [routerLink]="['/logindoctor']">Iniciar sesión</a>
         </section>
     </section>
     <footer class="footer">

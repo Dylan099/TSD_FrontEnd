@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
+import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { RegisdoctComponent } from './regisdoct/regisdoct.component';
     LoginComponent,
     RegistrationComponent,
     LoginsuccessComponent,
-    RegisdoctComponent
+    RegisdoctComponent,
+    DoctorViewComponent,
+    LoginDoctorComponent
   ],
   imports: [
     BrowserModule,

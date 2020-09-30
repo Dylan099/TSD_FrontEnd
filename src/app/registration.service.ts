@@ -14,12 +14,14 @@ export class RegistrationService {
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
   }
-
   public registerUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/registration",patient);
   }
   public registerDoctorFromRemote(doctor: Doctor):Observable<any>{
-    return this._http.post<any>("",doctor);
+    return this._http.post<any>("http://localhost:8080/regisdoct",doctor);
+  }
+  public loginDoctorFromRemote(doctor: Doctor):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/logindoctor",doctor);
   }
   
 }
