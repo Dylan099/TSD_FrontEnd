@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Patient } from '../patient';
 import { RegistrationService } from '../registration.service';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registration',
@@ -30,5 +30,14 @@ export class RegistrationComponent implements OnInit {
          this.msg = error.error;
         }
     )
+  }
+  showModal(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 }

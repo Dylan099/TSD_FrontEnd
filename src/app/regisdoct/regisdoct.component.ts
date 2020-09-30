@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Doctor } from '../doctor';
 import { RegistrationService } from '../registration.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-regisdoct',
   templateUrl: './regisdoct.component.html',
@@ -30,5 +30,13 @@ export class RegisdoctComponent implements OnInit {
         }
     )
   }
-
+  showModal(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
 }
