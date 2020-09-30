@@ -1,11 +1,11 @@
 export class Doctor {
-    IdDoctor: number;
-    FirstName: string;
-    LastName: string;
-    Ci: number;
+    idDoctor: number;
+    firstName: string;
+    lastName: string;
+    ci: number;
     correo: string;
-    UserName: string;
-    Password: string;
+    username: string;
+    password: string;
     constructor(){
 
     }

@@ -31,7 +31,7 @@
           <small class="text-danger" *ngIf="email.errors.required">Email is required field</small>
           <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid value of email</small>
         </div>
-        <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="doctor.Password" #password="ngModel" required
+        <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="doctor.password" #password="ngModel" required
         [class.is-invalid]="password.invalid && password.touched">
         <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
         <button [disabled]="loginform.form.invalid" type="submit" class="button">Iniciar sesion</button>

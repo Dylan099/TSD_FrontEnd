@@ -23,23 +23,23 @@
                     <small class="text-danger" *ngIf="email.errors.pattern">Ingrese un email correcto</small>
                 </div>
                 <!--Nombre-->
-                <input class="input" type="text" placeholder="Nombre" name="firstName" [(ngModel)]="patient.FirstName" #firstName="ngModel" required
+                <input class="input" type="text" placeholder="Nombre" name="firstName" [(ngModel)]="patient.firstName" #firstName="ngModel" required
                 [class.is-invalid]="firstName.invalid && firstName.touched">
                 <small class = "text-danger" [class.d-none]="firstName.valid || firstName.untouched">Debe ingresar su nombre</small>
                 <!--Apellido-->
-                <input class="input" type="text" placeholder="Apellido" name="lastName" [(ngModel)]="patient.LastName" #lastName="ngModel" required
+                <input class="input" type="text" placeholder="Apellido" name="lastName" [(ngModel)]="patient.lastName" #lastName="ngModel" required
                 [class.is-invalid]="lastName.invalid && lastName.touched">
                 <small class = "text-danger" [class.d-none]="lastName.valid || lastName.untouched">Debe ingresar su apellido</small>
                 <!--CI-->
-                <input class="input" type="number" placeholder="CI" name="ci" [(ngModel)]="patient.Ci" #ci="ngModel" required
+                <input class="input" type="number" placeholder="CI" name="ci" [(ngModel)]="patient.ci" #ci="ngModel" required
                 [class.is-invalid]="ci.invalid && ci.touched">
                 <small class = "text-danger" [class.d-none]="ci.valid || ci.untouched">Debe ingresar su CI</small>
                 <!--Username-->
-                <input class="input" type="text" placeholder="Nombre de usuario" name="userName" [(ngModel)]="patient.UserName" #userName="ngModel" required
+                <input class="input" type="text" placeholder="Nombre de usuario" name="userName" [(ngModel)]="patient.username" #userName="ngModel" required
                 [class.is-invalid]="userName.invalid && userName.touched">
                 <small class = "text-danger" [class.d-none]="userName.valid || userName.untouched">Debe ingresar un nombre de usuario</small>
                 <!--Password-->
-                <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="patient.Password" #password="ngModel" required
+                <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="patient.password" #password="ngModel" required
                 [class.is-invalid]="password.invalid && password.touched">
                 <small class="text-danger" [class.d-none]="password.valid || password.untouched">Debe ingresar una contraseña</small>
                 <button class="button">Registrarme</button>

@@ -1,13 +1,13 @@
 export class Patient {
-    IdPaciente:number;
-    FirstName:string;
-    LastName:string;
-    Ci:number;
-    LastStatus:string;
+    idPaciente:number;
+    firstName:string;
+    lastName:string;
+    ci:number;
+    lastStatus:string;
     correo:string;
-    UserName:string;
-    Password:string;
-    IdDoctor:number;
+    username:string;
+    password:string;
+    idDoctor:number;
     constructor(){
         
         }

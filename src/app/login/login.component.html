@@ -25,14 +25,14 @@
       <h2>Iniciar sesión</h2>
       <form class="login__container--form" #loginform="ngForm" (ngSubmit)="loginUser()">
         <small class="text-danger">{{msg}}</small>
-        <input class="input" type="email" placeholder="Correo"  name= "email" [(ngModel)]="patient.correo" required pattern="\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+        <input class="input" type="email" placeholder="Correo"  name= "email" [(ngModel)]="patient.correo" required 
         #email="ngModel"
         [class.is-invalid]="email.invalid && email.touched">
         <div *ngIf="email.errors && (email.invalid && email.touched)">
           <small class="text-danger" *ngIf="email.errors.required">Email is required field</small>
           <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid value of email</small>
         </div>
-        <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="patient.Password" #password="ngModel" required
+        <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="patient.password" #password="ngModel" required
         [class.is-invalid]="password.invalid && password.touched">
         <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
         <button [disabled]="loginform.form.invalid" type="submit" class="button">Iniciar sesion</button>
