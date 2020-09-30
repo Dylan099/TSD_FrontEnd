@@ -27,7 +27,7 @@
         <small class="text-danger">{{msg}}</small>
         
         <!--EMAIL Paciente-->
-        <input class="input" type="email" placeholder="Correo Paciente"  name= "email" [(ngModel)]="subscrition.correo" required 
+        <input class="input" type="email" placeholder="Correo Paciente"  name= "email" [(ngModel)]="subscrition.correoPaciente" required 
         #email="ngModel"
         [class.is-invalid]="email.invalid && email.touched">
         <div *ngIf="email.errors && (email.invalid && email.touched)">
@@ -35,7 +35,7 @@
           <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid value of email</small>
         </div>
         <!--Email Doctor-->
-        <input class="input" type="email" placeholder="Correo Doctor"  name= "email" [(ngModel)]="subscrition.correo" required 
+        <input class="input" type="email" placeholder="Correo Doctor"  name= "email" [(ngModel)]="subscrition.correoDoctor" required 
         #email="ngModel"
         [class.is-invalid]="email.invalid && email.touched">
         <div *ngIf="email.errors && (email.invalid && email.touched)">

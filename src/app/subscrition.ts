@@ -1,3 +1,4 @@
 export class Subscrition {
-    correo:string;
+    correoPaciente:string;
+    correoDoctor:string
 }
