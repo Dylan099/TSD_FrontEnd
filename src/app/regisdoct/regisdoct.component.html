@@ -1,1 +1,56 @@
-<p>regisdoct works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__img" src="../assets/clinica.png" alt="Img doctor">
+    </header>
+    <section class="register">
+        <section class="register__container">
+            <h2>Registrate como doctor</h2>
+            <form class="register__container--form" #Registerform = "ngForm"(ngSubmit)="registerDoctor()">
+                <!--Email-->
+                <input class="input" type="email" placeholder="Email Address"  name= "email" [(ngModel)]="doctor.correo" required pattern="^\w+@[a-zA-Z_]+?\[a-zA-Z]{2,3}$"
+                #email="ngModel"
+                [class.is-invalid]="email.invalid && email.touched">
+                <div *ngIf="email.errors && (email.invalid && email.touched)">
+                    <small class="text-danger" *ngIf="email.errors.required">Debe ingresar su email</small>
+                    <small class="text-danger" *ngIf="email.errors.pattern">Ingrese un email correcto</small>
+                </div>
+                <!--Nombre-->
+                <input class="input" type="text" placeholder="Nombre" name="firstName" [(ngModel)]="doctor.FirstName" #firstName="ngModel" required
+                [class.is-invalid]="firstName.invalid && firstName.touched">
+                <small class = "text-danger" [class.d-none]="firstName.valid || firstName.untouched">Debe ingresar su nombre</small>
+                <!--Apellido-->
+                <input class="input" type="text" placeholder="Apellido" name="lastName" [(ngModel)]="doctor.LastName" #lastName="ngModel" required
+                [class.is-invalid]="lastName.invalid && lastName.touched">
+                <small class = "text-danger" [class.d-none]="lastName.valid || lastName.untouched">Debe ingresar su apellido</small>
+                <!--CI-->
+                <input class="input" type="number" placeholder="CI" name="ci" [(ngModel)]="doctor.Ci" #ci="ngModel" required
+                [class.is-invalid]="ci.invalid && ci.touched">
+                <small class = "text-danger" [class.d-none]="ci.valid || ci.untouched">Debe ingresar su CI</small>
+                <!--Username-->
+                <input class="input" type="text" placeholder="Nombre de usuario" name="userName" [(ngModel)]="doctor.UserName" #userName="ngModel" required
+                [class.is-invalid]="userName.invalid && userName.touched">
+                <small class = "text-danger" [class.d-none]="userName.valid || userName.untouched">Debe ingresar un nombre de usuario</small>
+                <!--Password-->
+                <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="doctor.Password" #password="ngModel" required
+                [class.is-invalid]="password.invalid && password.touched">
+                <small class="text-danger" [class.d-none]="password.valid || password.untouched">Debe ingresar una contraseña</small>
+                <button class="button">Registrarme</button>
+            </form>
+            <a [routerLink]="['/login']">Iniciar sesión</a>
+        </section>
+    </section>
+    <footer class="footer">
+        <a href="/">Terminos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+      </footer>
+</body>
+</html>

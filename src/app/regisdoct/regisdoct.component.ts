@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Doctor } from '../doctor';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-regisdoct',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisdoctComponent implements OnInit {
 
-  constructor() { }
+  doctor = new Doctor();
+  msg = '';
+  constructor(private _service: RegistrationService, private _router: Router) { }
 
   ngOnInit(): void {
+  }
+  registerDoctor(){
+    this._service.registerDoctorFromRemote(this.doctor).subscribe(
+      data => {
+        console.log("response recieved");
+        this._router.navigate(['/login'])
+      },
+      error =>{
+         console.log("exception ocurred");
+         this.msg = error.error;
+        }
+    )
   }
 
 }
