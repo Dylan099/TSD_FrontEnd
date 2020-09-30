@@ -15,6 +15,7 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DownloadComponent } from './download/download.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DoctorViewComponent,
     LoginDoctorComponent,
     SubscriptionComponent,
-    ListPatientComponent
+    ListPatientComponent,
+    DownloadComponent
   ],
   imports: [
     BrowserModule,

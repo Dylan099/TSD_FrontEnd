@@ -12,6 +12,7 @@ export class RegistrationService {
 
   constructor(private _http: HttpClient) { }
   URL = "http://localhost:8080/listpatient";
+  URL1 = "http://localhost:8080/listpatientPDF"
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
@@ -30,6 +31,9 @@ export class RegistrationService {
   }
   listPatientGetFromRemote(){
     return this._http.get<Patient[]>(this.URL);
+  }
+  listPatientPDFGetFromRemote(){
+    return this._http.get<any>(this.URL1);
   }
   
 }
