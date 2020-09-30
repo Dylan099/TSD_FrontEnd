@@ -11,6 +11,7 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
 import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
     LoginsuccessComponent,
     RegisdoctComponent,
     DoctorViewComponent,
-    LoginDoctorComponent
+    LoginDoctorComponent,
+    SubscriptionComponent
   ],
   imports: [
     BrowserModule,

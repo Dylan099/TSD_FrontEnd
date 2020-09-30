@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 
 
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path:'logindoctor',
     component:LoginDoctorComponent
+  },
+  {
+    path:'subscription',
+    component:SubscriptionComponent
   }
 ];
 

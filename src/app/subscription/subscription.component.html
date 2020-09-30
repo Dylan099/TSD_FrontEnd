@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
+<body>
+  <header class="header">
+    <img class="header__img" src="../assets/clinica.png" alt="Img doctor">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="../assets/user-icon.png" alt="">
+        <p>Perfil</p>
+        
+      </div>
+      <ul>
+        <li class="login__container--show--item"><a [routerLink]="['/loginsuccess']">Principal</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="login">
+    <section class="login__container">
+      <h2>Suscribirse</h2>
+      <form class="login__container--form" #loginform="ngForm" (ngSubmit)="subDoctor()">
+        <small class="text-danger">{{msg}}</small>
+        
+        <!--EMAIL Paciente-->
+        <input class="input" type="email" placeholder="Correo Paciente"  name= "email" [(ngModel)]="subscrition.correo" required 
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors.required">Email is required field</small>
+          <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid value of email</small>
+        </div>
+        <!--Email Doctor-->
+        <input class="input" type="email" placeholder="Correo Doctor"  name= "email" [(ngModel)]="subscrition.correo" required 
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors.required">Email is required field</small>
+          <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid value of email</small>
+        </div>
+
+       
+        <button [disabled]="loginform.form.invalid" type="submit" class="button">Suscribirse</button>
+      </form>
+      
+    </section>
+  </section>
+  <footer class="footer">
+    <a href="/">Terminos de uso</a>
+    <a href="/">Declaración de privacidad</a>
+    <a href="/">Centro de ayuda</a>
+  </footer>
+</body>
+</html>
