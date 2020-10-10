@@ -16,6 +16,7 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DownloadComponent } from './download/download.component';
+import { SintomasComponent } from './sintomas/sintomas.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DownloadComponent } from './download/download.component';
     LoginDoctorComponent,
     SubscriptionComponent,
     ListPatientComponent,
-    DownloadComponent
+    DownloadComponent,
+    SintomasComponent
   ],
   imports: [
     BrowserModule,
