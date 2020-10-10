@@ -15,7 +15,7 @@
             <h2>Registrate</h2>
             <form class="register__container--form" #Registerform = "ngForm"(ngSubmit)="registerUser()">
                 <!--Email-->
-                <input class="input" type="email" placeholder="Email Address"  name= "email" [(ngModel)]="patient.correo" required 
+                <input class=   "input" type="email" placeholder="Email Address"  name= "email" [(ngModel)]="patient.correo" required 
                 #email="ngModel"
                 [class.is-invalid]="email.invalid && email.touched">
                 <div *ngIf="email.errors && (email.invalid && email.touched)">

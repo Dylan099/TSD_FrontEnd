@@ -1,1 +1,68 @@
-<p>sintomas works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+    <h2>Sintomas</h2>
+    <!--Fiebre-->
+    
+        <label id="fiebre">Tiene fiebre</label>
+        <mat-radio-group
+            aria-labelledby="fiebre"
+            class="radio-group"
+            [(ngModel)]="sintomas.fiebre">
+            <mat-radio-button class="radio-button" *ngFor="let fiebre of respuestas" [value]="fiebre" >
+                {{fiebre}}
+            </mat-radio-button>
+        </mat-radio-group>
+        <div>Your favorite season is: {{sintomas.fiebre}}</div>
+    
+    
+
+    <!--Tos Seca-->
+
+    <label id="tosSeca">Tiene Tos Secaa</label>
+        <mat-radio-group
+            aria-labelledby="tosSeca"
+            class="radio-group"
+            [(ngModel)]="sintomas.tosSeca">
+            <mat-radio-button class="radio-button" *ngFor="let tosSeca of respuestas" [value]="tosSeca" >
+                {{tosSeca}}
+            </mat-radio-button>
+        </mat-radio-group>
+        <div>Your favorite season is: {{sintomas.tosSeca}}</div>
+
+     <!--cansancio-->
+     <label id="cansancio">Tiene cansancio</label>
+     <mat-radio-group
+         aria-labelledby="cansancio"
+         class="radio-group"
+         [(ngModel)]="sintomas.cansancio">
+         <mat-radio-button class="radio-button" *ngFor="let cansancio of respuestas" [value]="cansancio" >
+             {{cansancio}}
+         </mat-radio-button>
+     </mat-radio-group>
+     <div>Your favorite season is: {{sintomas.cansancio}}</div>
+    
+     <!--garganta-->
+     <label id="garganta">Tiene Dolor de garganta</label>
+     <mat-radio-group
+         aria-labelledby="garganta"
+         class="radio-group"
+         [(ngModel)]="sintomas.garganta">
+         <mat-radio-button class="radio-button" *ngFor="let garganta of respuestas" [value]="garganta" >
+             {{garganta}}
+         </mat-radio-button>
+     </mat-radio-group>
+     <div>Your favorite season is: {{sintomas.garganta}}</div>
+
+     <!--garganta-->
+
+   
+</body>
+
+</html>

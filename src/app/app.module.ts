@@ -13,10 +13,11 @@ import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DownloadComponent } from './download/download.component';
 import { SintomasComponent } from './sintomas/sintomas.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SintomasComponent } from './sintomas/sintomas.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { Patient } from './patient';
 import { HttpClient } from '@angular/common/http';
 import { Doctor } from './doctor';
 import { Subscrition } from './subscrition';
+import { Sintomas } from './sintomas';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,7 @@ export class RegistrationService {
   listPatientPDFGetFromRemote(){
     return this._http.get<any>(this.URL1);
   }
-  
+  public sintomasFromRemoter(sintomas: Sintomas):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/sintomasPa",sintomas)
+  }
 }
