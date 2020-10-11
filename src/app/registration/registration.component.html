@@ -13,7 +13,7 @@
     <section class="register">
         <section class="register__container">
             <h2>Registrate</h2>
-            <form class="register__container--form" #Registerform = "ngForm"(ngSubmit)="registerUser()">
+            <form class="register__container--form" #Registerform = "ngForm" (ngSubmit)="registerUser()">
                 <!--Email-->
                 <input class=   "input" type="email" placeholder="Email Address"  name= "email" [(ngModel)]="patient.correo" required 
                 #email="ngModel"

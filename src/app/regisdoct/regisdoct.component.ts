@@ -17,19 +17,6 @@ export class RegisdoctComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  registerDoctor(){
-    this._service.registerDoctorFromRemote(this.doctor).subscribe(
-      data => {
-        console.log("response recieved");
-        this._router.navigate(['/logindoctor'])
-      },
-      error =>{
-         console.log("exception ocurred");
-         this.msg = error.error;
-        }
-    )
-  }
   showModal(){
     Swal.fire({
       position: 'top-end',
@@ -39,4 +26,17 @@ export class RegisdoctComponent implements OnInit {
       timer: 1500
     })
   }
+  registerDoctor(){
+    this._service.registerDoctorFromRemote(this.doctor).subscribe(
+      data => {
+        console.log("response recieved");
+        this._router.navigate(['/login doctor'])
+      },
+      error =>{
+         console.log("exception ocurred");
+         this.msg = error.error;
+      }
+    )
+  }
+  
 }

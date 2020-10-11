@@ -18,6 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DownloadComponent } from './download/download.component';
 import { SintomasComponent } from './sintomas/sintomas.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { MatRadioModule } from '@angular/material/radio';
     SubscriptionComponent,
     ListPatientComponent,
     DownloadComponent,
-    SintomasComponent
+    SintomasComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { MatRadioModule } from '@angular/material/radio';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatRadioModule
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegistrationService } from '../registration.service';
 import { Sintomas } from '../sintomas';
+import { NgForm } from '@angular/forms';
+import { FormBuilder, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-sintomas',
@@ -10,29 +12,27 @@ import { Sintomas } from '../sintomas';
   
 })
 export class SintomasComponent implements OnInit {
-  fiebre: string;
-  tosSeca: string;
-  cansancio:string;
-  garganta:string;
-  respuestas: string[] = ['Si', 'No'];
+  
   sintomas = new Sintomas();
   msg='';
+  isSubmitted = false;
   constructor(private _service: RegistrationService, private _router: Router) { }
 
-  ngOnInit(): void { }
-  
-  sintomasPa(){
+  submitForm(form: NgForm) {
+    this.isSubmitted = true;
     this._service.sintomasFromRemoter(this.sintomas).subscribe(
       data=>{
-        console.log("response recived");
-        this._router.navigate(['/sintomasPa'])
-      },
-      error=>{
-        console.log("exception ocurred");
-        this.msg= error.error;
-
+        if(!form.valid) {
+          console.log("exception ocurred");
+          return false;
+        } else {
+          console.log("response recived");
+          this._router.navigate(['/sintomasPa'])
+          alert(JSON.stringify(form.value))
+        }
       }
-    );
-  }
+    )}
 
+
+  ngOnInit(): void { }
 }
