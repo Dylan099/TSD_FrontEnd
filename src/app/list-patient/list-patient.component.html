@@ -8,6 +8,13 @@
 <body>
    <div class="table__list" align="center">
       <h1 >Lista de Pacientes</h1>
+      <div class="row">
+         <div class="col">
+           <div class="form-group">
+             <input type="text" class="form-control" name="filterPost" placeholder="Buscar paciente" [(ngModel)]="filterPost">
+           </div>
+         </div>
+       </div>
       <hr>
       <button  type="submit" class="button" [routerLink]="['/listpatientPDF']">Descargar</button>
        <mat-tab-group>
@@ -23,7 +30,7 @@
                       <th scope="col">Username</th>
                    </tr>
                 </thead>
-                <tbody *ngFor="let p of listpatient">
+                <tbody *ngFor="let p of listpatient| filter:filterPost">
                        <td>{{p.firstName}}</td>
                        <td>{{p.lastName}}</td>
                        <td>{{p.ci}}</td>
@@ -46,7 +53,7 @@
                 <td>{{p.firstName}}</td>
                 <td>{{p.lastName}}</td>
                 <td>{{p.lastStatus}}</td>
-              </tbody>
+              </tbody> 
            </table>
           </mat-tab>
        </mat-tab-group>

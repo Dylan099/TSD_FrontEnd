@@ -9,11 +9,12 @@ import { RegistrationService } from '../registration.service';
   styleUrls: ['./list-patient.component.css']
 })
 export class ListPatientComponent implements OnInit {
-
+  
   listpatient:Patient[];
   aux: any;
   msg = '';
   constructor(private _service: RegistrationService, private _router: Router) { }
+  filterPost = '';
 
   ngOnInit(): void {
     this.ObtenerDatos();
