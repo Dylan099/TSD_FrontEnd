@@ -6,16 +6,11 @@
    <title>Document</title>
 </head>
 <body>
+   <section class="main">
+      <h2 class="main__title">Lista de Pacientes</h2>
+      <input type="text" class="input" name="filterPost" placeholder="Buscar paciente" [(ngModel)]="filterPost">
+   </section>
    <div class="table__list" align="center">
-      <h1 >Lista de Pacientes</h1>
-      <div class="row">
-         <div class="col">
-           <div class="form-group">
-             <input type="text" class="form-control" name="filterPost" placeholder="Buscar paciente" [(ngModel)]="filterPost">
-           </div>
-         </div>
-       </div>
-      <hr>
       <button  type="submit" class="button" [routerLink]="['/listpatientPDF']">Descargar</button>
        <mat-tab-group>
         <mat-tab label="Lista Pacientes">
