@@ -7,8 +7,11 @@
     <title>Registro</title>
 </head>
 <body>
-    <h2>Sintomas</h2>
-    <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate>
+   <section class="main">
+   <h1>Sintomas</h1>
+   <p>Marque los sintomas que usted padece en el siguiente formulario</p>
+    <section class="main__container"> 
+    <form class="login__container--form" #myForm="ngForm" (submit)="submitForm(myForm)" novalidate>
         <!-- Fiebre -->
         <h1>Tiene fiebre</h1>
         <div class="custom-control custom-radio">
@@ -154,9 +157,12 @@
            </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-danger btn-lg btn-block">Find out gender</button>
+        <button type="submit" class="button">Revisar</button>
      </form>
-   
+     
+   </section>
+      
+   </section>
 </body>
 
 </html>

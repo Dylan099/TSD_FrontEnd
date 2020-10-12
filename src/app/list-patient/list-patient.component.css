@@ -16,7 +16,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7ef29d", en
 }
 .main {
   display: flex;
-
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -53,6 +52,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7ef29d", en
   letter-spacing: 1px;
   padding: 0px 20px;
   margin: 10px 0px;
+  outline: none;
 }
 .table__list{
   margin: 0px 15px 15px;
