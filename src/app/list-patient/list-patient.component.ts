@@ -23,17 +23,14 @@ export class ListPatientComponent implements OnInit {
   }
   ObtenerDatos(){
     
-    this._service.listPatientGetFromRemote(localStorage.getItem("doctor.idDoctor")).subscribe(
+    this._service.listPatientGetFromRemote(localStorage.getItem("idDoctor")).subscribe(
       data => this.listpatient=data);
       this.aux = this.listpatient;   
   }
 
   detalle(id){
-    localStorage.setItem("id",id);
+    localStorage.setItem("idPaciente",id);
     console.log(id);
     this._router.navigate(['/detalle']);
   }
-
-  
-
 }

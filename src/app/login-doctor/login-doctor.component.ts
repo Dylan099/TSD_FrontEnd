@@ -21,8 +21,8 @@ export class LoginDoctorComponent implements OnInit {
   loginDoctor(id){
     this._service.loginDoctorFromRemote(this.doctor).subscribe(
       data => {
-        localStorage.setItem("id",id);
-        console.log(id);
+        localStorage.setItem("idDoctor",data);
+        console.log(data);
         console.log("response recieved");
         this._router.navigate(['/doctorview'])
       },
