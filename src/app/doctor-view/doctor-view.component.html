@@ -9,13 +9,13 @@
 <body>
   
     <header>
-      <h1>Doctor view</h1>
-      <button class="btn btn-primary" (click)="doctorid(Doctor.idDoctor)">Lista de Paciente</button>
+      <h1>Doctor view</h1>  
         <div >
           <div>
             <ul>
               <li><a href=""></a>Mis Sintomas</li>
-              <li><a href=""></a>Mis Consultas</li>            
+              <li><a href=""></a>Mis Consultas</li> 
+              <li><a [routerLink]="['/listpatient']">Lista de Paciente</a></li>           
               <li><a [routerLink]="['/logindoctor']">Logout</a></li>
             </ul>
           </div>
@@ -25,10 +25,9 @@
       </header>
       
       <section class="login">
-          
-
       </section>
-
+      
+      
       <footer class="footer">
         <a href="/">Terminos de uso</a>
         <a href="/">Declaración de privacidad</a>

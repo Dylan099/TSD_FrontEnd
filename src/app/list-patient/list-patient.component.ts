@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Doctor } from '../doctor';
 import { Patient } from '../patient';
 import { RegistrationService } from '../registration.service';
 
@@ -13,7 +14,7 @@ export class ListPatientComponent implements OnInit {
   listpatient:Patient[];
   aux: any;
   msg = '';
-  paciente: Patient;
+  doctor:Doctor;
   constructor(private _service: RegistrationService, private _router: Router) { }
   filterPost = '';
 
@@ -22,7 +23,7 @@ export class ListPatientComponent implements OnInit {
   }
   ObtenerDatos(){
     
-    this._service.listPatientGetFromRemote(localStorage.getItem("id")).subscribe(
+    this._service.listPatientGetFromRemote(localStorage.getItem("doctor.idDoctor")).subscribe(
       data => this.listpatient=data);
       this.aux = this.listpatient;   
   }
