@@ -31,8 +31,8 @@ export class RegistrationService {
   public subscriptionFromRemote(subscrition: Subscrition):Observable<any>{
     return this._http.post<any>("http://localhost:8080/subscription",subscrition);
   }
-  listPatientGetFromRemote(){
-    return this._http.get<Patient[]>(this.URL);
+  listPatientGetFromRemote(id){
+    return this._http.get<Patient[]>(this.URL+"/"+id);
   }
   listPatientPDFGetFromRemote(){
     return this._http.get<any>(this.URL1);

@@ -13,6 +13,7 @@ export class ListPatientComponent implements OnInit {
   listpatient:Patient[];
   aux: any;
   msg = '';
+  paciente: Patient;
   constructor(private _service: RegistrationService, private _router: Router) { }
   filterPost = '';
 
@@ -20,7 +21,8 @@ export class ListPatientComponent implements OnInit {
     this.ObtenerDatos();
   }
   ObtenerDatos(){
-    this._service.listPatientGetFromRemote().subscribe(
+    
+    this._service.listPatientGetFromRemote(localStorage.getItem("id")).subscribe(
       data => this.listpatient=data);
       this.aux = this.listpatient;   
   }
@@ -30,4 +32,7 @@ export class ListPatientComponent implements OnInit {
     console.log(id);
     this._router.navigate(['/detalle']);
   }
+
+  
+
 }
