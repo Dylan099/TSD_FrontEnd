@@ -37,12 +37,12 @@
                 <!--Sexo-->
                 <h1>Sexo:</h1>
                 <div class="custom-control custom-radio">
-                    <input id="Femenino" type="radio" class="custom-control-input" value="Femenino" name="sexo" #sexo="ngModel" [(ngModel)]="patient.sexo" required>
-                    <label class="custom-control-label" for="Femenino">Si</label>
+                    <input id="femenino" type="radio" class="custom-control-input" value="femenino" name="sexo" #sexo="ngModel" [(ngModel)]="patient.sexo" required>
+                    <label class="custom-control-label" for="femenino">Femenino</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input id="Masculino" type="radio" class="custom-control-input" value="Masculino" name="sexo" #sexo="ngModel" [(ngModel)]="patient.sexo" required>
-                    <label class="custom-control-label" for="Masculino">No</label>
+                    <input id="masculino" type="radio" class="custom-control-input" value="masculino" name="sexo" #sexo="ngModel" [(ngModel)]="patient.sexo" required>
+                    <label class="custom-control-label" for="masculino">Masculino</label>
                  </div>
                  
                  <div *ngIf="Registerform.invalid && sexo.invalid">
