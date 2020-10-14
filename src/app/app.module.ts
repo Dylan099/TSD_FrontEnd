@@ -20,6 +20,7 @@ import { SintomasComponent } from './sintomas/sintomas.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 
@@ -37,6 +38,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     DownloadComponent,
     SintomasComponent,
     FilterPipe,
+    DetalleComponent,
     
   ],
   imports: [

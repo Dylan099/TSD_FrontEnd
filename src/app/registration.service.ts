@@ -14,6 +14,7 @@ export class RegistrationService {
   constructor(private _http: HttpClient) { }
   URL = "http://localhost:8080/listpatient";
   URL1 = "http://localhost:8080/listpatientPDF"
+  URL2 = "http://localhost:8040/api/buscar"
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
@@ -38,5 +39,8 @@ export class RegistrationService {
   }
   public sintomasFromRemoter(sintomas: Sintomas):Observable<any>{
     return this._http.post<any>("http://localhost:8080/sintomasPa",sintomas)
+  }
+  OrdgenGetbyId(id){
+    return this._http.get<Sintomas>(this.URL2+"/"+id);
   }
 }

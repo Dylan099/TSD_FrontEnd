@@ -25,5 +25,9 @@ export class ListPatientComponent implements OnInit {
       this.aux = this.listpatient;   
   }
 
-
+  detalle(id){
+    localStorage.setItem("id",id);
+    console.log(id);
+    this._router.navigate(['/detalle']);
+  }
 }

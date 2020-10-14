@@ -11,12 +11,13 @@
       <input type="text" class="input" name="filterPost" placeholder="Buscar paciente" [(ngModel)]="filterPost">
    </section>
    <div class="table__list" >
-      <button  type="submit" class="button" [routerLink]="['/listpatientPDF']">Descargar</button>
+      <button  type="submit" class="button" [routerLink]="['/listpatient']">Descargar</button>
        <mat-tab-group>
         <mat-tab label="Lista Pacientes">
             <table id="myTable" class="table table-striped">
                 <thead>
                    <tr>
+                      <th scope="col">ID</th>
                       <th scope="col">Nombres</th>
                       <th scope="col">Apellidos</th>
                       <th scope="col">CI</th>
@@ -26,12 +27,14 @@
                    </tr>
                 </thead>
                 <tbody *ngFor="let p of listpatient| filter:filterPost">
+                       <td>{{p.idPaciente}}</td>
                        <td>{{p.firstName}}</td>
                        <td>{{p.lastName}}</td>
                        <td>{{p.ci}}</td>
                        <td>{{p.lastStatus}}</td>
                        <td>{{p.correo}}</td>
                        <td>{{p.username}}</td>
+                       <td><button class="btn btn-primary" (click)="detalle(p.idPaciente)">Detalle</button></td>
                 </tbody>
              </table>
         </mat-tab>
@@ -39,15 +42,18 @@
             <table id="myTable" class="table table-striped">
               <thead>
                  <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Estado</th>
                  </tr>
               </thead>
               <tbody *ngFor="let p of listpatient">
+                <td>{{p.idPaciente}}</td>
                 <td>{{p.firstName}}</td>
                 <td>{{p.lastName}}</td>
                 <td>{{p.lastStatus}}</td>
+                <td><button class="btn btn-primary" (click)="detalle(p.idPaciente)">Detalle</button></td>
               </tbody> 
            </table>
           </mat-tab>
