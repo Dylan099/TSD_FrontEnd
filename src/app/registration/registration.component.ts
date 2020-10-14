@@ -14,6 +14,7 @@ export class RegistrationComponent implements OnInit {
 
   patient = new Patient();
   msg = '';
+  
   constructor(private _service: RegistrationService, private _router: Router) { }
 
   ngOnInit(): void {

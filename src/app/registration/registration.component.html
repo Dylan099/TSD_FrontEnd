@@ -34,6 +34,26 @@
                 <input class="input" type="number" placeholder="CI" name="ci" [(ngModel)]="patient.ci" #ci="ngModel" required
                 [class.is-invalid]="ci.invalid && ci.touched">
                 <small class = "text-danger" [class.d-none]="ci.valid || ci.untouched">Debe ingresar su CI</small>
+                <!--Sexo-->
+                <h1>Sexo:</h1>
+                <div class="custom-control custom-radio">
+                    <input id="siS" type="radio" class="custom-control-input" value="siS" name="sexo" #sexo="ngModel" [(ngModel)]="patient.sexo" required>
+                    <label class="custom-control-label" for="siS">Si</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="noS" type="radio" class="custom-control-input" value="noS" name="sexo" #sexo="ngModel" [(ngModel)]="patient.sexo" required>
+                    <label class="custom-control-label" for="noS">No</label>
+                 </div>
+                 
+                 <div *ngIf="Registerform.invalid && sexo.invalid">
+                    <p class = "text-danger">Debe seleccionar una opcion</p>
+                 </div>
+
+                 <!--Edad-->
+                <input class="input" type="text" placeholder="Edad" name="edad" [(ngModel)]="patient.edad" #edad="ngModel" required
+                [class.is-invalid]="edad.invalid && edad.touched">
+                <small class = "text-danger" [class.d-none]="edad.valid || edad.untouched">Debe ingresar un nombre de usuario</small>
+
                 <!--Username-->
                 <input class="input" type="text" placeholder="Nombre de usuario" name="userName" [(ngModel)]="patient.username" #userName="ngModel" required
                 [class.is-invalid]="userName.invalid && userName.touched">

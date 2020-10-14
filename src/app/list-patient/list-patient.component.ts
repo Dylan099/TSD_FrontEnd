@@ -33,4 +33,5 @@ export class ListPatientComponent implements OnInit {
     console.log(id);
     this._router.navigate(['/detalle']);
   }
+  
 }
