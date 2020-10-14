@@ -34,7 +34,7 @@
         <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="doctor.pass" #password="ngModel" required
         [class.is-invalid]="password.invalid && password.touched">
         <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
-        <button [disabled]="loginform.form.invalid" type="submit" class="button">Iniciar sesion</button>
+        <button [disabled]="loginform.form.invalid" type="submit" class="button" (click)="doctorid(doctor.idDoctor)">Iniciar sesion</button>
       </form>
       <div class="login__container--show">
         <p class="login__container--register">No tienes ninguna cuenta <a [routerLink]="['/regisdoct']">Regístrate</a></p>

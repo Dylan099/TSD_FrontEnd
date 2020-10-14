@@ -30,5 +30,9 @@ export class LoginDoctorComponent implements OnInit {
         }
     );
   }
+  doctorid(id){
+    localStorage.setItem("id",id);
+    console.log(id);
+  }
 
 }
