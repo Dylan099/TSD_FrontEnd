@@ -18,9 +18,11 @@ export class LoginDoctorComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  loginDoctor(){
+  loginDoctor(id){
     this._service.loginDoctorFromRemote(this.doctor).subscribe(
       data => {
+        localStorage.setItem("id",id);
+        console.log(id);
         console.log("response recieved");
         this._router.navigate(['/doctorview'])
       },
@@ -30,9 +32,6 @@ export class LoginDoctorComponent implements OnInit {
         }
     );
   }
-  doctorid(id){
-    localStorage.setItem("id",id);
-    console.log(id);
-  }
+  
 
 }

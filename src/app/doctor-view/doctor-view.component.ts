@@ -17,10 +17,6 @@ export class DoctorViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  doctorid(id){
-    localStorage.setItem("id",id);
-    console.log(id);
-    this._router.navigate(['/listpatient']);
-  }
+  
 
 }
