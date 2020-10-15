@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
 import { Doctor } from './doctor';
 import { Subscrition } from './subscrition';
 import { Sintomas } from './sintomas';
-import { Mensaje } from './mensaje';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,6 @@ export class RegistrationService {
   URL1 = "http://localhost:8080/listpatientPDF"
   URL2 = "http://localhost:8040/api/buscar"
   URL3 = "http://localhost:8040/api/buscarFemenino"
-  URL4 = "http://localhost:8080/loginsuccess"
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
@@ -36,9 +34,6 @@ export class RegistrationService {
   }
   listPatientGetFromRemote(id){
     return this._http.get<Patient[]>(this.URL+"/"+id);
-  }
-  listResultFromRemote(){
-    return this._http.get<Mensaje[]>(this.URL4);
   }
   listPatientPDFGetFromRemote(){
     return this._http.get<any>(this.URL1);
