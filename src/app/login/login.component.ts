@@ -19,9 +19,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginUser(){
+  loginUser(id){
     this._service.loginUserFromRemote(this.patient).subscribe(
       data => {
+        localStorage.setItem("idPaciente",data);
+        console.log(data);
         console.log("response recieved");
         this._router.navigate(['/loginsuccess'])
       },
