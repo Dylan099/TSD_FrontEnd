@@ -10,13 +10,28 @@ import { RegistrationService } from '../registration.service';
   styleUrls: ['./list-patient.component.css']
 })
 export class ListPatientComponent implements OnInit {
-  
+
+  selectedItem: string;
+
   listpatient:Patient[];
   aux: any;
   msg = '';
   doctor:Doctor;
   constructor(private _service: RegistrationService, private _router: Router) { }
   filterPost = '';
+
+  generos: any[]=[
+    {name: 'Femenino'},
+    {name: 'Masculino'}
+  ];
+
+  DatosFemenino(){
+    this._service.buscarfemenino(localStorage.getItem("idDoctor")).subscribe(
+      data=> this.generos=data);
+      this.aux = this.listpatient;
+  }
+
+  
 
   ngOnInit(): void {
     this.ObtenerDatos();

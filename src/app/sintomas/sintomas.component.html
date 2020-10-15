@@ -12,15 +12,32 @@
    <p>Marque los sintomas que usted padece en el siguiente formulario</p>
     <section class="main__container"> 
     <form class="login__container--form" #myForm="ngForm" (submit)="submitForm(myForm)" novalidate>
+
+         <!-- difilcutadRespirar -->
+         <h1>Tiene difilcutad al Respirar</h1>
+         <div class="custom-control custom-radio">
+            <input id="siDR" type="radio" class="custom-control-input" value="siDR" name="difilcutadRespirar" #difilcutadRespirar="ngModel" [(ngModel)]="sintomas.breathingProblem" required>
+            <label class="custom-control-label" for="siDR">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noDR" type="radio" class="custom-control-input" value="noDR" name="difilcutadRespirar" #difilcutadRespirar="ngModel" [(ngModel)]="sintomas.breathingProblem" required>
+            <label class="custom-control-label" for="noDR">No</label>
+         </div>
+      
+         <div *ngIf="isSubmitted && myForm.invalid && difilcutadRespirar.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
         <!-- Fiebre -->
         <h1>Tiene fiebre</h1>
         <div class="custom-control custom-radio">
-           <input id="siF" type="radio" class="custom-control-input" value="siF" name="fiebre" #fiebre="ngModel" [(ngModel)]="sintomas.fiebre" required>
+           <input id="siF" type="radio" class="custom-control-input" value="siF" name="fiebre" #fiebre="ngModel" [(ngModel)]="sintomas.fever" required>
            <label class="custom-control-label" for="siF">Si</label>
         </div>
      
         <div class="custom-control custom-radio">
-           <input id="noF" type="radio" class="custom-control-input" value="noF" name="fiebre" #fiebre="ngModel" [(ngModel)]="sintomas.fiebre" required>
+           <input id="noF" type="radio" class="custom-control-input" value="noF" name="fiebre" #fiebre="ngModel" [(ngModel)]="sintomas.fever" required>
            <label class="custom-control-label" for="noF">No</label>
         </div>
      
@@ -31,44 +48,28 @@
          <!-- Tos Seca -->
          <h1>Tiene tos Seca</h1>
          <div class="custom-control custom-radio">
-            <input id="siT" type="radio" class="custom-control-input" value="siT" name="tos" #tos="ngModel" [(ngModel)]="sintomas.tosSeca" required>
+            <input id="siT" type="radio" class="custom-control-input" value="siT" name="tos" #tos="ngModel" [(ngModel)]="sintomas.dryCough" required>
             <label class="custom-control-label" for="siT">Si</label>
          </div>
       
          <div class="custom-control custom-radio">
-            <input id="noT" type="radio" class="custom-control-input" value="noT" name="tos" #tos="ngModel" [(ngModel)]="sintomas.tosSeca" required>
+            <input id="noT" type="radio" class="custom-control-input" value="noT" name="tos" #tos="ngModel" [(ngModel)]="sintomas.dryCough" required>
             <label class="custom-control-label" for="noT">No</label>
          </div>
       
          <div *ngIf="isSubmitted && tos.invalid && myForm.invalid">
             <p class = "text-danger">Debe seleccionar una opcion</p>
          </div>
-         
-         <!-- cansancio -->
-         <h1>Tiene Cansancio</h1>
-         <div class="custom-control custom-radio">
-            <input id="siC" type="radio" class="custom-control-input" value="siC" name="cansancio" #cansancio="ngModel" [(ngModel)]="sintomas.cansancio" required>
-            <label class="custom-control-label" for="siC">Si</label>
-         </div>
-      
-         <div class="custom-control custom-radio">
-            <input id="noC" type="radio" class="custom-control-input" value="noC" name="cansancio" #cansancio="ngModel" [(ngModel)]="sintomas.cansancio" required>
-            <label class="custom-control-label" for="noC">No</label>
-         </div>
-      
-         <div *ngIf="isSubmitted && myForm.invalid && cansancio.invalid">
-            <p class = "text-danger">Debe seleccionar una opcion</p>
-         </div>
 
          <!-- garganta -->
          <h1>Tiene dolores de Garganta</h1>
          <div class="custom-control custom-radio">
-            <input id="siG" type="radio" class="custom-control-input" value="siG" name="garganta" #garganta="ngModel" [(ngModel)]="sintomas.garganta" required>
+            <input id="siG" type="radio" class="custom-control-input" value="siG" name="garganta" #garganta="ngModel" [(ngModel)]="sintomas.soreThroat" required>
             <label class="custom-control-label" for="siG">Si</label>
          </div>
       
          <div class="custom-control custom-radio">
-            <input id="noG" type="radio" class="custom-control-input" value="noG" name="garganta" #garganta="ngModel" [(ngModel)]="sintomas.garganta" required>
+            <input id="noG" type="radio" class="custom-control-input" value="noG" name="garganta" #garganta="ngModel" [(ngModel)]="sintomas.soreThroat" required>
             <label class="custom-control-label" for="noG">No</label>
          </div>
       
@@ -76,86 +77,250 @@
             <p class = "text-danger">Debe seleccionar una opcion</p>
          </div>
 
-          <!-- perdidaOlfato -->
-          <h1>Perdida de Olfato</h1>
+         <!-- Nariz congestionada -->
+         <h1>Tiene la nariz congestionada</h1>
+         <div class="custom-control custom-radio">
+            <input id="siNC" type="radio" class="custom-control-input" value="siNC" name="nariz" #nariz="ngModel" [(ngModel)]="sintomas.runningSe" required>
+            <label class="custom-control-label" for="siNC">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noNC" type="radio" class="custom-control-input" value="noNC" name="nariz" #nariz="ngModel" [(ngModel)]="sintomas.runningSe" required>
+            <label class="custom-control-label" for="noNC">No</label>
+         </div>
+      
+         <div *ngIf="isSubmitted && myForm.invalid && nariz.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- Asma -->
+         <h1>Tiene Asma</h1>
+         <div class="custom-control custom-radio">
+            <input id="siAS" type="radio" class="custom-control-input" value="siAS" name="asma" #asma="ngModel" [(ngModel)]="sintomas.asthma" required>
+            <label class="custom-control-label" for="siAS">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noAS" type="radio" class="custom-control-input" value="noAS" name="asma" #asma="ngModel" [(ngModel)]="sintomas.asthma" required>
+            <label class="custom-control-label" for="noAS">No</label>
+         </div>
+      
+         <div *ngIf="isSubmitted && myForm.invalid && asma.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+         
+         <!-- Enfermedad pulmonar cronica -->
+         <h1>Tiene enfermedad pulmonar cronica</h1>
+         <div class="custom-control custom-radio">
+            <input id="siPC" type="radio" class="custom-control-input" value="siPC" name="chronicLungDisease" #chronicLungDisease="ngModel" [(ngModel)]="sintomas.chronicLungDisease" required>
+            <label class="custom-control-label" for="siPC">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noPC" type="radio" class="custom-control-input" value="noPC" name="chronicLungDisease" #chronicLungDisease="ngModel" [(ngModel)]="sintomas.chronicLungDisease" required>
+            <label class="custom-control-label" for="noPC">No</label>
+         </div>
+      
+         <div *ngIf="isSubmitted && myForm.invalid && chronicLungDisease.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- dolorCabeza -->
+         <h1>Tiene Dolor de cabeza</h1>
+         <div class="custom-control custom-radio">
+            <input id="siDC" type="radio" class="custom-control-input" value="siDC" name="dolorCabeza" #dolorCabeza="ngModel" [(ngModel)]="sintomas.headache" required>
+            <label class="custom-control-label" for="siDC">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noDC" type="radio" class="custom-control-input" value="noDC" name="dolorCabeza" #dolorCabeza="ngModel" [(ngModel)]="sintomas.headache" required>
+            <label class="custom-control-label" for="noDC">No</label>
+         </div>
+      
+         <div *ngIf="isSubmitted && myForm.invalid && dolorCabeza.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- Cardio Patia -->
+         <h1>Tiene Cardio Patia</h1>
+         <div class="custom-control custom-radio">
+            <input id="siCP" type="radio" class="custom-control-input" value="siCP" name="heartDisease" #heartDisease="ngModel" [(ngModel)]="sintomas.heartDisease" required>
+            <label class="custom-control-label" for="siCP">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noCP" type="radio" class="custom-control-input" value="noCP" name="heartDisease" #heartDisease="ngModel" [(ngModel)]="sintomas.heartDisease" required>
+            <label class="custom-control-label" for="noCP">No</label>
+         </div>
+      
+         <div *ngIf="isSubmitted && myForm.invalid && heartDisease.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- Diabetes -->
+         <h1>Tiene Diabetes</h1>
+         <div class="custom-control custom-radio">
+            <input id="siD" type="radio" class="custom-control-input" value="siD" name="diabetes" #diabetes="ngModel" [(ngModel)]="sintomas.diabetes" required>
+            <label class="custom-control-label" for="siD">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noD" type="radio" class="custom-control-input" value="noD" name="diabetes" #diabetes="ngModel" [(ngModel)]="sintomas.diabetes" required>
+            <label class="custom-control-label" for="noD">No</label>
+         </div>
+         <div *ngIf="isSubmitted && myForm.invalid && dolorCabeza.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- Hipertension -->
+         <h1>Tiene Hipertension</h1>
+         <div class="custom-control custom-radio">
+            <input id="siHT" type="radio" class="custom-control-input" value="siHT" name="hyperTension" #hyperTension="ngModel" [(ngModel)]="sintomas.hyperTension" required>
+            <label class="custom-control-label" for="siHT">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noHT" type="radio" class="custom-control-input" value="noHT" name="hyperTension" #hyperTension="ngModel" [(ngModel)]="sintomas.hyperTension" required>
+            <label class="custom-control-label" for="noHT">No</label>
+         </div>
+         <div *ngIf="isSubmitted && myForm.invalid && hyperTension.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- Fatiga -->
+         <h1>Tiene Fatiga</h1>
+         <div class="custom-control custom-radio">
+            <input id="siFT" type="radio" class="custom-control-input" value="siFT" name="fatigue" #fatigue="ngModel" [(ngModel)]="sintomas.fatigue" required>
+            <label class="custom-control-label" for="siFT">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noFT" type="radio" class="custom-control-input" value="noFT" name="fatigue" #fatigue="ngModel" [(ngModel)]="sintomas.fatigue" required>
+            <label class="custom-control-label" for="noFT">No</label>
+         </div>
+         <div *ngIf="isSubmitted && myForm.invalid && fatigue.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+         <!-- Gatrointestinal -->
+         <h1>Tiene gastrointestinal</h1>
+         <div class="custom-control custom-radio">
+            <input id="siGI" type="radio" class="custom-control-input" value="siGI" name="gastrointestinal" #gastrointestinal="ngModel" [(ngModel)]="sintomas.gastrointestinal" required>
+            <label class="custom-control-label" for="siGI">Si</label>
+         </div>
+      
+         <div class="custom-control custom-radio">
+            <input id="noGI" type="radio" class="custom-control-input" value="noGI" name="gastrointestinal" #gastrointestinal="ngModel" [(ngModel)]="sintomas.gastrointestinal" required>
+            <label class="custom-control-label" for="noGI">No</label>
+         </div>
+         <div *ngIf="isSubmitted && myForm.invalid && gastrointestinal.invalid">
+            <p class = "text-danger">Debe seleccionar una opcion</p>
+         </div>
+
+          <!-- Viajes al Extranjero -->
+          <h1>Usted Viajo</h1>
           <div class="custom-control custom-radio">
-             <input id="siPO" type="radio" class="custom-control-input" value="siPO" name="perdidaOlfato" #perdidaOlfato="ngModel" [(ngModel)]="sintomas.perdidaOlfato" required>
-             <label class="custom-control-label" for="siPO">Si</label>
+             <input id="siV" type="radio" class="custom-control-input" value="siV" name="abroadTravel" #abroadTravel="ngModel" [(ngModel)]="sintomas.abroadTravel" required>
+             <label class="custom-control-label" for="siV">Si</label>
           </div>
        
           <div class="custom-control custom-radio">
-             <input id="noPO" type="radio" class="custom-control-input" value="noPO" name="perdidaOlfato" #perdidaOlfato="ngModel" [(ngModel)]="sintomas.perdidaOlfato" required>
-             <label class="custom-control-label" for="noPO">No</label>
+             <input id="noV" type="radio" class="custom-control-input" value="noV" name="abroadTravel" #abroadTravel="ngModel" [(ngModel)]="sintomas.abroadTravel" required>
+             <label class="custom-control-label" for="noV">No</label>
           </div>
-       
-          <div *ngIf="isSubmitted && myForm.invalid && perdidaOlfato.invalid">
+          <div *ngIf="isSubmitted && myForm.invalid && abroadTravel.invalid">
              <p class = "text-danger">Debe seleccionar una opcion</p>
           </div>
 
-           <!-- perdidaGusto -->
-           <h1>Perdida de Gusto</h1>
+          <!-- Viajes al Extranjero -->
+          <h1>Tuvo contacto con el paciente Covid </h1>
+          <div class="custom-control custom-radio">
+             <input id="siCC" type="radio" class="custom-control-input" value="siCC" name="contactWithCovidPatient" #contactWithCovidPatient="ngModel" [(ngModel)]="sintomas.contactWithCovidPatient" required>
+             <label class="custom-control-label" for="siCC">Si</label>
+          </div>
+       
+          <div class="custom-control custom-radio">
+             <input id="noCC" type="radio" class="custom-control-input" value="noCC" name="contactWithCovidPatient" #contactWithCovidPatient="ngModel" [(ngModel)]="sintomas.contactWithCovidPatient" required>
+             <label class="custom-control-label" for="noCC">No</label>
+          </div>
+          <div *ngIf="isSubmitted && myForm.invalid && contactWithCovidPatient.invalid">
+             <p class = "text-danger">Debe seleccionar una opcion</p>
+          </div>
+
+          <!-- Asisitio a una reunion -->
+          <h1>Usted Asistio a una reunion </h1>
+          <div class="custom-control custom-radio">
+             <input id="siAR" type="radio" class="custom-control-input" value="siAR" name="attendedLargeGathering" #attendedLargeGathering="ngModel" [(ngModel)]="sintomas.attendedLargeGathering" required>
+             <label class="custom-control-label" for="siAR">Si</label>
+          </div>
+       
+          <div class="custom-control custom-radio">
+             <input id="noAR" type="radio" class="custom-control-input" value="noAR" name="attendedLargeGathering" #attendedLargeGathering="ngModel" [(ngModel)]="sintomas.attendedLargeGathering" required>
+             <label class="custom-control-label" for="noAR">No</label>
+          </div>
+          <div *ngIf="isSubmitted && myForm.invalid && attendedLargeGathering.invalid">
+             <p class = "text-danger">Debe seleccionar una opcion</p>
+          </div>
+
+          <!-- Visitar lugares publicos -->
+          <h1>Usted visito lugares publicos </h1>
+          <div class="custom-control custom-radio">
+             <input id="siVP" type="radio" class="custom-control-input" value="siVP" name="visitedPublicExposedPlaces" #visitedPublicExposedPlaces="ngModel" [(ngModel)]="sintomas.visitedPublicExposedPlaces" required>
+             <label class="custom-control-label" for="siVP">Si</label>
+          </div>
+       
+          <div class="custom-control custom-radio">
+             <input id="noVP" type="radio" class="custom-control-input" value="noVP" name="visitedPublicExposedPlaces" #visitedPublicExposedPlaces="ngModel" [(ngModel)]="sintomas.visitedPublicExposedPlaces" required>
+             <label class="custom-control-label" for="noVP">No</label>
+          </div>
+          <div *ngIf="isSubmitted && myForm.invalid && visitedPublicExposedPlaces.invalid">
+             <p class = "text-danger">Debe seleccionar una opcion</p>
+          </div>
+
+          <!-- Familia trabaja en lugares publicos -->
+          <h1>Su familia trabaja en lugares expuestos </h1>
+          <div class="custom-control custom-radio">
+             <input id="siFE" type="radio" class="custom-control-input" value="siFE" name="familyWorkingInPublicExposedPlaces" #familyWorkingInPublicExposedPlaces="ngModel" [(ngModel)]="sintomas.familyWorkingInPublicExposedPlaces" required>
+             <label class="custom-control-label" for="siFE">Si</label>
+          </div>
+       
+          <div class="custom-control custom-radio">
+             <input id="noFE" type="radio" class="custom-control-input" value="noFE" name="familyWorkingInPublicExposedPlaces" #familyWorkingInPublicExposedPlaces="ngModel" [(ngModel)]="sintomas.familyWorkingInPublicExposedPlaces" required>
+             <label class="custom-control-label" for="noFE">No</label>
+          </div>
+          <div *ngIf="isSubmitted && myForm.invalid && familyWorkingInPublicExposedPlaces.invalid">
+             <p class = "text-danger">Debe seleccionar una opcion</p>
+          </div>
+
+           <!-- Uso de macara -->
+           <h1>Utiliza mascara </h1>
            <div class="custom-control custom-radio">
-              <input id="siPG" type="radio" class="custom-control-input" value="siPG" name="perdidaGusto" #perdidaGusto="ngModel" [(ngModel)]="sintomas.perdidaGusto" required>
-              <label class="custom-control-label" for="siPG">Si</label>
+              <input id="siUM" type="radio" class="custom-control-input" value="siUM" name="wearingMasks" #wearingMasks="ngModel" [(ngModel)]="sintomas.wearingMasks" required>
+              <label class="custom-control-label" for="siUM">Si</label>
            </div>
         
            <div class="custom-control custom-radio">
-              <input id="noPG" type="radio" class="custom-control-input" value="noPG" name="perdidaGusto" #perdidaGusto="ngModel" [(ngModel)]="sintomas.perdidaGusto" required>
-              <label class="custom-control-label" for="noPG">No</label>
+              <input id="noUM" type="radio" class="custom-control-input" value="noUM" name="wearingMasks" #wearingMasks="ngModel" [(ngModel)]="sintomas.wearingMasks" required>
+              <label class="custom-control-label" for="noUM">No</label>
            </div>
-        
-           <div *ngIf="isSubmitted && myForm.invalid && perdidaGusto.invalid">
+           <div *ngIf="isSubmitted && myForm.invalid && wearingMasks.invalid">
               <p class = "text-danger">Debe seleccionar una opcion</p>
            </div>
 
-           <!-- difilcutadRespirar -->
-           <h1>Tiene difilcutad al Respirar</h1>
+           <!-- Desinfecta -->
+           <h1>Utiliza desinfectante </h1>
            <div class="custom-control custom-radio">
-              <input id="siDR" type="radio" class="custom-control-input" value="siDR" name="difilcutadRespirar" #difilcutadRespirar="ngModel" [(ngModel)]="sintomas.difilcutadRespirar" required>
-              <label class="custom-control-label" for="siDR">Si</label>
+              <input id="siDI" type="radio" class="custom-control-input" value="siDI" name="sanitizationFromMarket" #sanitizationFromMarket="ngModel" [(ngModel)]="sintomas.sanitizationFromMarket" required>
+              <label class="custom-control-label" for="siDI">Si</label>
            </div>
         
            <div class="custom-control custom-radio">
-              <input id="noDR" type="radio" class="custom-control-input" value="noDR" name="difilcutadRespirar" #difilcutadRespirar="ngModel" [(ngModel)]="sintomas.difilcutadRespirar" required>
-              <label class="custom-control-label" for="noDR">No</label>
+              <input id="noDI" type="radio" class="custom-control-input" value="noDI" name="sanitizationFromMarket" #sanitizationFromMarket="ngModel" [(ngModel)]="sintomas.sanitizationFromMarket" required>
+              <label class="custom-control-label" for="noDI">No</label>
            </div>
-        
-           <div *ngIf="isSubmitted && myForm.invalid && difilcutadRespirar.invalid">
+           <div *ngIf="isSubmitted && myForm.invalid && sanitizationFromMarket.invalid">
               <p class = "text-danger">Debe seleccionar una opcion</p>
            </div>
-
-           <!-- dolorCabeza -->
-           <h1>Tiene Dolor de cabeza</h1>
-           <div class="custom-control custom-radio">
-              <input id="siDC" type="radio" class="custom-control-input" value="siDC" name="dolorCabeza" #dolorCabeza="ngModel" [(ngModel)]="sintomas.dolorCabeza" required>
-              <label class="custom-control-label" for="siDC">Si</label>
-           </div>
-        
-           <div class="custom-control custom-radio">
-              <input id="noDC" type="radio" class="custom-control-input" value="noDC" name="dolorCabeza" #dolorCabeza="ngModel" [(ngModel)]="sintomas.dolorCabeza" required>
-              <label class="custom-control-label" for="noDC">No</label>
-           </div>
-        
-           <div *ngIf="isSubmitted && myForm.invalid && dolorCabeza.invalid">
-              <p class = "text-danger">Debe seleccionar una opcion</p>
-           </div>
-
-           <!-- dolorPecho -->
-           <h1>Tiene Dolor de Pecho</h1>
-           <div class="custom-control custom-radio">
-              <input id="siDP" type="radio" class="custom-control-input" value="siDP" name="dolorPecho" #dolorPecho="ngModel" [(ngModel)]="sintomas.dolorPecho" required>
-              <label class="custom-control-label" for="siDP">Si</label>
-           </div>
-        
-           <div class="custom-control custom-radio">
-              <input id="noDP" type="radio" class="custom-control-input" value="noDP" name="dolorPecho" #dolorPecho="ngModel" [(ngModel)]="sintomas.dolorPecho" required>
-              <label class="custom-control-label" for="noDP">No</label>
-           </div>
-        
-           <div *ngIf="isSubmitted && myForm.invalid && dolorPecho.invalid">
-              <p class = "text-danger">Debe seleccionar una opcion</p>
-           </div>
-
         <!-- Submit Button -->
         <button type="submit" class="button">Revisar</button>
      </form>

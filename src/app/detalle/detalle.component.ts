@@ -15,11 +15,11 @@ export class DetalleComponent implements OnInit {
   ngOnInit(){
     this.ObtenerDatos();
   }
-  Sintomas:Sintomas;
+  sintomas:Sintomas;
   ObtenerDatos(){
     this._service.OrdgenGetbyId(localStorage.getItem("id")).subscribe(
       data=>{
-        this.Sintomas=data;
+        this.sintomas=data;
         console.log(data);
       },error=>
       {
