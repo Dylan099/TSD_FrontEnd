@@ -321,11 +321,12 @@
            <div *ngIf="isSubmitted && myForm.invalid && sanitizationFromMarket.invalid">
               <p class = "text-danger">Debe seleccionar una opcion</p>
            </div>
-
-
         <!-- Submit Button -->
         <button type="submit" class="button">Revisar</button>
      </form>
+     <div (ngSubmit)="Obtener()">
+      <small class = "text-danger" [(ngModel)]="sintomas.covid"></small>
+     </div>
      
    
    </section>

@@ -16,6 +16,7 @@ export class RegistrationService {
   URL1 = "http://localhost:8080/listpatientPDF"
   URL2 = "http://localhost:8040/api/buscar"
   URL3 = "http://localhost:8040/api/buscarFemenino"
+  URL4 = "http://localhost:8080/listpatient"
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
@@ -47,4 +48,8 @@ export class RegistrationService {
   buscarfemenino(idF){
     return this._http.get<Patient[]>(this.URL3+"/"+idF);
   }
+  obtenerrespuesta(){
+     return this._http.get<Sintomas[]>(this.URL4); 
+  }
 }
+

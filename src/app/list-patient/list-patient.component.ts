@@ -32,7 +32,7 @@ export class ListPatientComponent implements OnInit {
   }
 
   
-
+  
   ngOnInit(): void {
     this.ObtenerDatos();
   }
