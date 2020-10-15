@@ -12,13 +12,13 @@ import { RegistrationService } from '../registration.service';
 export class ListPatientComponent implements OnInit {
 
   selectedItem: string;
-
+  filterPost = '';
   listpatient:Patient[];
+
   aux: any;
   msg = '';
   doctor:Doctor;
   constructor(private _service: RegistrationService, private _router: Router) { }
-  filterPost = '';
 
   generos: any[]=[
     {name: 'Femenino'},
@@ -49,4 +49,9 @@ export class ListPatientComponent implements OnInit {
     this._router.navigate(['/detalle']);
   }
   
+
+
+
+
+
 }

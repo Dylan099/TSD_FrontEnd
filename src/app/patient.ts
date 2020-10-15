@@ -5,7 +5,7 @@ export class Patient {
     ci:number;
     sexo:string;
     edad:string;
-    idStatus:number;
+    idStatus:string;
     correo:string;
     username:string;
     pass:string;
