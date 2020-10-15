@@ -23,7 +23,7 @@
   <section class="login">
     <section class="login__container">
       <h2>Iniciar sesión</h2>
-      <form class="login__container--form" #loginform="ngForm" (ngSubmit)="loginUser()">
+      <form class="login__container--form" #loginform="ngForm" (ngSubmit)="loginUser(patient.idPaciente)">
         <small class="text-danger">{{msg}}</small>
         <input class="input" type="email" placeholder="Correo"  name= "email" [(ngModel)]="patient.correo" required 
         #email="ngModel"
