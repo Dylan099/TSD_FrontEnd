@@ -326,18 +326,14 @@
         <!-- Submit Button -->
         <button type="submit" class="button">Revisar</button>
      </form>
-     
+     <div *ngFor="let p of respuesta">
+      <h3>La respuest es: {{p.mensaje}}</h3>
+   </div>
+   
    </section>
       
    </section>
-   <table>
-      <thead>
-         <th scope="col">ID</th>
-      </thead>
-      <tbody *ngFor="let p of sintomas">
-         <td>{{p.covid}}</td>
-      </tbody>
-   </table>
+   
 </body>
 
 </html>

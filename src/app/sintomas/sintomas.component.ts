@@ -4,6 +4,7 @@ import { RegistrationService } from '../registration.service';
 import { Sintomas } from '../sintomas';
 import { NgForm } from '@angular/forms';
 import { FormBuilder, Validators } from "@angular/forms";
+import { Mensaje } from '../mensaje';
 
 @Component({
   selector: 'app-sintomas',
@@ -16,6 +17,9 @@ export class SintomasComponent implements OnInit {
   sintomas = new Sintomas();
   msg='';
   isSubmitted = false;
+
+  respuesta: Mensaje[];
+
   constructor(private _service: RegistrationService, private _router: Router) { }
 
   submitForm(form: NgForm) {
