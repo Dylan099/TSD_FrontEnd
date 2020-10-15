@@ -1,1 +1,41 @@
-<p>resultados works!</p>
+<div class="table__list" >
+    <button  type="submit" class="button" [routerLink]="['/listpatient']">Descargar</button>
+     <mat-tab-group>
+      <mat-tab label="Sintomas">
+          <table id="myTable" class="table table-striped">
+              <thead>
+                 <tr>
+                    <th scope="col">Prob Respiratorio</th>
+                    <th scope="col">Fiebre</th>
+                    <th scope="col">Tos Seca</th>
+                    <th scope="col">Dolor de Garganta</th>
+                    <th scope="col">Nariz congestionada</th>
+                    <th scope="col">Dolor Cabeza</th>
+                    <th scope="col">Respuesta</th>
+                 </tr>
+              </thead>
+              <tbody *ngFor="let p of listsintomas">
+                     <td>{{p.breathingProblem}}</td>
+                     <td>{{p.fever}}</td>
+                     <td>{{p.dryCough}}</td>
+                     <td>{{p.soreThroat}}</td>
+                     <td>{{p.runningSe}}</td>
+                     <td>{{p.headache}}</td>
+                     <td>{{p.covid}}</td>
+              </tbody>
+           </table>
+      </mat-tab>
+      
+     </mat-tab-group>
+     
+        <table id="tabla" class="table table-striped">
+          <thead>
+              <tr>
+                  <th scope="row">El resultado es:</th>
+              </tr>
+          </thead>
+          <tbody *ngFor="let p of listsintomas">
+            <td>{{p.covid}}</td>
+          </tbody>
+        </table>
+</div>

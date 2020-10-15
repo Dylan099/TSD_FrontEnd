@@ -48,6 +48,9 @@ export class RegistrationService {
   buscarfemenino(idF){
     return this._http.get<Patient[]>(this.URL3+"/"+idF);
   }
+  listaResultadoFromRemote(id){
+    return this._http.get<Sintomas[]>(this.URL4+"/"+id);
+  }
   
 }
 
