@@ -1,1 +1,57 @@
-<p>graficas works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-5 pl-5 mt-5">
+                <h1>Graficos</h1>
+                <br>
+                <h3>Shufle data</h3>
+                <br>
+                <button class="btn btn-outlin-primary" (click)="shuffeData()">Shufle</button>
+            </div>
+            <div class="col-7">
+                <div class="chart-wrapper">
+                    <canvas baseChart
+                    [datasets]="lineChartData"
+                    [labels]="linerChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    [plugins]="lineChartPlugins">
+                    </canvas>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-7">
+                <div class="chart-wrapper">
+                    <canvas baseChart
+                    [datasets]="lineChartData1"
+                    [labels]="linerChartLabels1"
+                    [options]="lineChartOptions1"
+                    [colors]="lineChartColors1"
+                    [legend]="lineChartLegend1"
+                    [chartType]="lineChartType1"
+                    [plugins]="lineChartPlugins1">
+                    </canvas>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

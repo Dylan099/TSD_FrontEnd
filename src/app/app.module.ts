@@ -25,12 +25,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { GraficasComponent } from './graficas/graficas.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    GraficasComponent,
     RegistrationComponent,
     LoginsuccessComponent,
     RegisdoctComponent,
@@ -56,7 +58,8 @@ import { GraficasComponent } from './graficas/graficas.component';
     MatRadioModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ChartsModule
     
   ],
   providers: [],
