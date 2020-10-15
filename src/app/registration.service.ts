@@ -16,7 +16,7 @@ export class RegistrationService {
   URL1 = "http://localhost:8080/listpatientPDF"
   URL2 = "http://localhost:8040/api/buscar"
   URL3 = "http://localhost:8040/api/buscarFemenino"
-  URL4 = "http://localhost:8080/listpatient"
+  URL4 = "http://localhost:8080/sintomasPa"
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
