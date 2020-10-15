@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Mensaje } from '../mensaje';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-loginsuccess',
@@ -7,8 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginsuccessComponent implements OnInit {
 
-  constructor() { }
+  mensaje: Mensaje[];
+  aux: any;
 
+  constructor(private _service: RegistrationService, private _router: Router) {
+    this.ObtenerDatos();
+   }
+   ObtenerDatos(){
+     this._service.listResultFromRemote().subscribe(
+       data=>this.mensaje=data);
+       this.aux = this.mensaje;
+   }
   ngOnInit(): void {
   }
 

@@ -1,5 +1,6 @@
 export class Mensaje {
-    mensaje:string
+    covid:string;
+    porcentaje:string;
     constructor(){
         
     }
