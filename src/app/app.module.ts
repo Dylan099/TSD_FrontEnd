@@ -23,6 +23,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { DetalleComponent } from './detalle/detalle.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ResultadosComponent } from './resultados/resultados.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     SintomasComponent,
     FilterPipe,
     DetalleComponent,
+    ResultadosComponent,
     
   ],
   imports: [

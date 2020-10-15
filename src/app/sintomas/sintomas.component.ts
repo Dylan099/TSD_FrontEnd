@@ -22,13 +22,6 @@ export class SintomasComponent implements OnInit {
   respuesta:Sintomas[];
 
   constructor(private _service: RegistrationService, private _router: Router) { }
-
-  Obtener(){
-      this._service.obtenerrespuesta().subscribe(
-        data => this.respuesta=data);
-        this.aux = this.respuesta;
-  }
-
   submitForm(form: NgForm) {
     this.isSubmitted = true;
     this._service.sintomasFromRemoter(this.sintomas).subscribe(
@@ -46,6 +39,5 @@ export class SintomasComponent implements OnInit {
     
 
   ngOnInit(): void { 
-    this.Obtener();
   }
 }
