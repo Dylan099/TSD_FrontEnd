@@ -54,12 +54,37 @@ export class RegistrationService {
     return this._http.get<Sintomas[]>(this.URL4+"/"+id);
   }
 
-  listCantidadEnfermosMes(id){
-    return this._http.get<Pares[]>("http://localhost:8080/graficosX"+"/"+id);
+  graficaContagiadosEdadValor1(id){
+    return this._http.get<Pares[]>("http://localhost:8080/graficaContagiadosEdadValor1"+"/"+id);
   }
 
-  listCantidadRecuperadosMes(id){
-    return this._http.get<Pares[]>("http://localhost:8080/graficosY"+"/"+id);
+  graficaContagiadosEdadValor2(id){
+    return this._http.get<Pares[]>("http://localhost:8080/graficaContagiadosEdadValor2"+"/"+id);
+  }
+  
+  graficaContagiadosFechaValor1(id){
+    return this._http.get<String[]>("http://localhost:8080/graficaContagiadosFechaValor1"+"/"+id);
+  }
+
+  graficaContagiadosFechaValor2(id){
+    return this._http.get<String[]>("http://localhost:8080/graficaContagiadosFechaValor2"+"/"+id);
+  }
+  
+  graficaContagiadosSexoFemenino(id){
+    return this._http.get<Pares>("http://localhost:8080/graficaContagiadosSexoFemenino"+"/"+id);
+  }
+
+  graficaContagiadosSexoMasculino(id){
+    return this._http.get<Pares>("http://localhost:8080/graficaContagiadosSexoMasculino"+"/"+id);
+  }
+
+    
+  graficaContagiadosValor1(id){
+    return this._http.get<Pares>("http://localhost:8080/graficaContagiados_Valor1"+"/"+id);
+  }
+
+  graficaContagiadosValor2(id){
+    return this._http.get<Pares>("http://localhost:8080/graficaContagiados_Valor2"+"/"+id);
   }
   
 }

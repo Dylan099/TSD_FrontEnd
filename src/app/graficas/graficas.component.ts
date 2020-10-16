@@ -17,33 +17,62 @@ export class GraficasComponent implements OnInit {
   constructor(private _service: RegistrationService, private _router: Router) { }
 
   list: Pares[];
+  lists: String[];
   aux1: any[] = [87, 13, 72, 75, 17, 75];
   aux2: any[] = [87, 13, 72, 75, 17, 75];
 
+  numeroX: Pares;
+  numeroY: Pares;
+
   ngOnInit(): void {
-    this.ObtenerDatos();
   }
 
-  ObtenerDatos(){
-    
-    this._service.listCantidadEnfermosMes(localStorage.getItem("idDoctor")).subscribe( data => {this.list=data
+  shuffeData(){
+
+    this._service.graficaContagiadosEdadValor1(localStorage.getItem("idDoctor")).subscribe( data => {this.list=data
       console.log(data);
       this.aux1 = this.list;
       });
 
-    this._service.listCantidadRecuperadosMes(localStorage.getItem("idDoctor")).subscribe(
+    this._service.graficaContagiadosEdadValor2(localStorage.getItem("idDoctor")).subscribe(
       data => {this.list=data;
       this.aux2 = this.list;
-      });   
+      });  
 
-  }
-
-  shuffeData(){
-    this.ObtenerDatos();
     this.lineChartData1 = [
     {data: this.aux1, label: 'Enfermos'},
     {data: this.aux2, label: 'Recuperados'}
     ];
+
+
+
+    this._service.graficaContagiadosSexoMasculino(localStorage.getItem("idDoctor")).subscribe( 
+      data => {this.numeroX=data
+      console.log(data);
+      this.aux1 = this.list;
+      });
+
+    this._service.graficaContagiadosSexoFemenino(localStorage.getItem("idDoctor")).subscribe(
+      data => {this.numeroY=data;
+      this.aux2 = this.list;
+      });  
+
+    this.lineChartData2 = [
+      {data: this.aux1, label: 'Contagiados Femenino'},
+      {data: this.aux2, label: 'Contagiados Masculino'}
+    ];
+
+
+    this._service.graficaContagiadosFechaValor1(localStorage.getItem("idDoctor")).subscribe( 
+      data => {this.lists=data
+      console.log(data);
+      this.aux1 = this.list;
+      });
+
+    this._service.graficaContagiadosFechaValor2(localStorage.getItem("idDoctor")).subscribe(
+      data => {this.lists=data;
+      this.aux2 = this.list;
+      });  
 
     this.lineChartData = [
       {data: this.aux1, label: 'Enfermos'},
@@ -82,6 +111,11 @@ export class GraficasComponent implements OnInit {
   lineChartData: ChartDataSets[] = [
     {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
     {data: [87, 13, 72, 75, 17, 75], label: 'Recuperadoss'}
+  ];
+
+  lineChartData2: ChartDataSets[] = [
+    {data: [12, 72, 78, 75, 17, 75], label: 'Contagiados Femenino'},
+    {data: [87, 13, 72, 75, 17, 75], label: 'Contagiados Masculino'}
   ];
 
   linerChartLabels1: Label[] = ['Octubre', 'Noviembre', 'Diciembre', 'Enero', 'Febrero', 'Marzo'];
