@@ -1,46 +1,28 @@
-<div align="center">
-    <form class="form-horizontal">
-    <fieldset>
-    <div class="form-group">
-    <strong><label class="col-md-4 control-label" for="textinput">Fiebre</label></strong>
-      <div class="col-md-4">
-      {{sintomas.fever}}
-      </div>
-    </div>
-    <div class="form-group">
-      <strong><label class="col-md-4 control-label" for="textinput">Tos Seca</label></strong>
-      <div class="col-md-4">
-        {{sintomas.dryCough}}
-      </div>
-    </div>
-    <div class="form-group">
-      <strong> <label class="col-md-4 control-label" for="textinput">Cansancio</label>
-      </strong>
-         <div class="col-md-4">
-        {{sintomas.runningSe}}
-      </div>
-    </div>
-    <div class="form-group">
-     <strong> <label class="col-md-4 control-label" for="Cliente">Garganta</label></strong>
-      <div class="col-md-4">
-        {{sintomas.asthma}}
-      </div>
-    </div>
-    
-    <div class="form-group">
-      <strong><label class="col-md-4 control-label" for="textinput">Perdida de Olfato</label></strong>
-      <div class="col-md-4">
-        {{sintomas.headache}}
-      </div>
-    </div>
-    <div class="form-group">
-         <div class="col-md-4">
-        <button (click)="volver()" id="singlebutton" name="singlebutton" class="btn btn-primary">Volver</button>
-      </div>
-    </div>
-  
-    </fieldset>
-    </form>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="table__list">
+    <button  type="submit" class="button" [routerLink]="['/listpatient']">Volver</button>
+    <mat-tab-group>
+      <mat-tab label="Lista Pacientes">
+        <table id="myTable" class="table table-striped">
+          <thead>
+            <tr>
+               <th scope="col">Fiebre</th>
+               <th scope="col">Tos seca</th>
+               <th scope="col">Cansancio</th>
+               <th scope="col">Garganta</th>
+               <th scope="col">Perdida de olfato</th>
+            </tr>
+         </thead>
+        </table>
+      </mat-tab>
+    </mat-tab-group>
   </div>
-  
+</body>
+</html>
