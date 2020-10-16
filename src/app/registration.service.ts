@@ -16,7 +16,7 @@ export class RegistrationService {
   constructor(private _http: HttpClient) { }
   URL = "http://localhost:8080/listpatient";
   URL1 = "http://localhost:8080/listpatientPDF"
-  URL2 = "http://localhost:8040/api/buscar"
+  URL2 = "http://localhost:8040/api/searchTimeLine"
   URL3 = "http://localhost:8040/api/buscarFemenino"
   URL4 = "http://localhost:8080/resultados"
 
