@@ -11,11 +11,11 @@ import { Sintomas } from '../sintomas';
 export class DetalleComponent implements OnInit {
 
   constructor(private _service: RegistrationService, private _router: Router) { }
+  sintomas:Sintomas;
 
   ngOnInit(){
     this.ObtenerDatos();
   }
-  sintomas:Sintomas;
   ObtenerDatos(){
     this._service.OrdgenGetbyId(localStorage.getItem("idPaciente")).subscribe(
       data=>{

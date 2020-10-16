@@ -18,13 +18,14 @@ export class SintomasComponent implements OnInit {
   msg='';
   aux: any;
   isSubmitted = false;
+  id ='';
 
   respuesta:Sintomas[];
 
   constructor(private _service: RegistrationService, private _router: Router) { }
   submitForm(form: NgForm) {
     this.isSubmitted = true;
-    this._service.sintomasFromRemoter(this.sintomas).subscribe(
+    this._service.sintomasFromRemoter(this.sintomas, localStorage.getItem("idPaciente")).subscribe(
       data=>{
         if(!form.valid) {
           console.log("exception ocurred");

@@ -21,6 +21,17 @@ export class GraficasComponent implements OnInit {
   aux1: any[] = [87, 13, 72, 75, 17, 75];
   aux2: any[] = [87, 13, 72, 75, 17, 75];
 
+  
+  aux11: any[] = [87, 13, 72, 75, 17, 75];
+  aux21: any[] = [87, 13, 72, 75, 17, 75];
+
+  
+  aux12: any[] = [87, 13, 72, 75, 17, 75];
+  aux22: any[] = [87, 13, 72, 75, 17, 75];
+
+  aux13: any[] = [87, 13, 72, 75, 17, 75];
+  aux23: any[] = [87, 13, 72, 75, 17, 75];
+
   numeroX: Pares;
   numeroY: Pares;
 
@@ -40,29 +51,26 @@ export class GraficasComponent implements OnInit {
       });  
 
     this.lineChartData1 = [
-    {data: this.aux1, label: 'Enfermos'},
-    {data: this.aux2, label: 'Recuperados'}
+    {data: this.aux1, label: 'Contagiados'},
+    {data: this.aux2, label: 'Edades'}
     ];
-
-
-
 
 
 
     this._service.graficaContagiadosValor1(localStorage.getItem("idDoctor")).subscribe( 
       data => {this.numeroX=data
       console.log(data);
-      this.aux1 = this.list;
+      this.aux11 = this.list;
       });
 
     this._service.graficaContagiadosValor2(localStorage.getItem("idDoctor")).subscribe(
       data => {this.numeroY=data;
-      this.aux2 = this.list;
+      this.aux21 = this.list;
       });  
 
     this.lineChartData = [
-      {data: this.aux1, label: 'Sanos'},
-      {data: this.aux2, label: 'Contagiados'}
+      {data: this.aux11, label: 'Sanos'},
+      {data: this.aux21, label: 'Contagiados'}
     ];
     
 
@@ -74,18 +82,18 @@ export class GraficasComponent implements OnInit {
     this._service.graficaContagiadosSexoMasculino(localStorage.getItem("idDoctor")).subscribe( 
       data => {this.numeroX=data
       console.log(data);
-      this.aux1 = this.list;
+      this.aux12 = this.list;
       });
 
     this._service.graficaContagiadosSexoFemenino(localStorage.getItem("idDoctor")).subscribe(
       data => {this.numeroY=data;
-      this.aux2 = this.list;
+      this.aux22 = this.list;
       });  
 
       
     this.lineChartData2 = [
-      {data: this.aux1, label: 'Contagiados Femenino'},
-      {data: this.aux2, label: 'Contagiados Masculino'}
+      {data: this.aux12, label: 'Contagiados Femenino'},
+      {data: this.aux22, label: 'Contagiados Masculino'}
     ];
 
 
@@ -94,17 +102,17 @@ export class GraficasComponent implements OnInit {
     this._service.graficaContagiadosFechaValor1(localStorage.getItem("idDoctor")).subscribe( 
       data => {this.lists=data
       console.log(data);
-      this.aux1 = this.list;
+      this.aux13 = this.list;
       });
 
     this._service.graficaContagiadosFechaValor2(localStorage.getItem("idDoctor")).subscribe(
       data => {this.lists=data;
-      this.aux2 = this.list;
+      this.aux23 = this.list;
       });  
 
     this.lineChartData = [
-      {data: this.aux1, label: 'Enfermos'},
-      {data: this.aux2, label: 'Recuperados'}
+      {data: this.aux13, label: 'Enfermos'},
+      {data: this.aux23, label: 'Recuperados'}
     ];
     
   }
@@ -132,18 +140,18 @@ export class GraficasComponent implements OnInit {
 
 
   lineChartData1: ChartDataSets[] = [
-    {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
-    {data: [87, 13, 72, 75, 17, 75], label: 'Recuperadoss'}
+    {data: [0,0], label: 'Enfermos'},
+    {data: [0,0], label: 'Recuperadoss'}
   ];
 
   lineChartData: ChartDataSets[] = [
-    {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
-    {data: [87, 13, 72, 75, 17, 75], label: 'Recuperadoss'}
+    {data: [0,0], label: 'Enfermos'},
+    {data: [0,0], label: 'Recuperadoss'}
   ];
 
   lineChartData2: ChartDataSets[] = [
-    {data: [12, 72, 78, 75, 17, 75], label: 'Contagiados Femenino'},
-    {data: [87, 13, 72, 75, 17, 75], label: 'Contagiados Masculino'}
+    {data: [0,0], label: 'Contagiados Femenino'},
+    {data: [0,0], label: 'Contagiados Masculino'}
   ];
 
   linerChartLabels1: Label[] = ['Octubre', 'Noviembre', 'Diciembre', 'Enero', 'Febrero', 'Marzo'];
