@@ -29,6 +29,7 @@
                     [chartType]="lineChartType"
                     [plugins]="lineChartPlugins">
                     </canvas>
+                    <br>
                     <div class="grafo">
                         <canvas baseChart
                         [datasets]="lineChartData1"
@@ -38,6 +39,20 @@
                         [legend]="lineChartLegend1"
                         [chartType]="lineChartType1"
                         [plugins]="lineChartPlugins1">
+                        </canvas>
+                    </div>
+                    <br>
+                    <br>
+                    <br>    
+                    <div class="grafo">
+                        <canvas baseChart
+                        [datasets]="lineChartData2"
+                        [labels]="linerChartLabels1"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins">
                         </canvas>
                     </div>
                 </div>
