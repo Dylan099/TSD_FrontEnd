@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DetalleComponent } from './detalle/detalle.component';
 import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 import { DownloadComponent } from './download/download.component';
 import { GraficasComponent } from './graficas/graficas.component';
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     path: 'graficos',
     component:GraficasComponent 
+  },
+  {
+    path: 'detalle',
+    component:DetalleComponent
   }
 ];
 
