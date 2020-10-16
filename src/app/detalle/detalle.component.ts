@@ -12,6 +12,7 @@ export class DetalleComponent implements OnInit {
 
   constructor(private _service: RegistrationService, private _router: Router) { }
   sintomas:Sintomas;
+  sintomasdetalle:Sintomas[];
 
   ngOnInit(){
     this.ObtenerDatos();
@@ -19,7 +20,7 @@ export class DetalleComponent implements OnInit {
   ObtenerDatos(){
     this._service.OrdgenGetbyId(localStorage.getItem("idPaciente")).subscribe(
       data=>{
-        this.sintomas=data;
+        this.sintomasdetalle=data;
         console.log(data);
       },error=>
       {
