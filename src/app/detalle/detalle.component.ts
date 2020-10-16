@@ -17,7 +17,7 @@ export class DetalleComponent implements OnInit {
   }
   sintomas:Sintomas;
   ObtenerDatos(){
-    this._service.OrdgenGetbyId(localStorage.getItem("id")).subscribe(
+    this._service.OrdgenGetbyId(localStorage.getItem("idPaciente")).subscribe(
       data=>{
         this.sintomas=data;
         console.log(data);
