@@ -6,17 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container mt-5 pt-5">
+    <header>
+        <h1>Bienvenido a sus Graficos doctor</h1>
+    </header>
+    <div class=" mt-5 pt-5">
         <div class="row">
             <div class="col-5 pl-5 mt-5">
-                <h1>Graficos</h1>
+                <h2>Graficos</h2>
                 <br>
-                <h3>Shufle data</h3>
+                <h3>Aqui puede ver la informacion sobre sus pacientes</h3>
                 <br>
-                <button class="btn btn-outlin-primary" (click)="shuffeData()">Shufle</button>
-            </div>
+                <button class="button" (click)="shuffeData()">Actulizar</button>
+            </div>    
             <div class="col-7">
-                <div class="chart-wrapper">
+                <div class="grafo">
                     <canvas baseChart
                     [datasets]="lineChartData"
                     [labels]="linerChartLabels"
@@ -26,32 +29,20 @@
                     [chartType]="lineChartType"
                     [plugins]="lineChartPlugins">
                     </canvas>
-
+                    <div class="grafo">
+                        <canvas baseChart
+                        [datasets]="lineChartData1"
+                        [labels]="linerChartLabels1"
+                        [options]="lineChartOptions1"
+                        [colors]="lineChartColors1"
+                        [legend]="lineChartLegend1"
+                        [chartType]="lineChartType1"
+                        [plugins]="lineChartPlugins1">
+                        </canvas>
+                    </div>
                 </div>
             </div>
-            
         </div>
-
-    </div>
-    <div class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-7">
-                <div class="chart-wrapper">
-                    <canvas baseChart
-                    [datasets]="lineChartData1"
-                    [labels]="linerChartLabels1"
-                    [options]="lineChartOptions1"
-                    [colors]="lineChartColors1"
-                    [legend]="lineChartLegend1"
-                    [chartType]="lineChartType1"
-                    [plugins]="lineChartPlugins1">
-                    </canvas>
-
-                </div>
-            </div>
-            
-        </div>
-
     </div>
 </body>
 </html>
