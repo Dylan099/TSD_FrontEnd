@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
 import { Color, Label} from 'ng2-charts';
+import { Mensaje } from '../mensaje';
+import { RegistrationService } from '../registration.service';
+import { Router } from '@angular/router';
+import { Pares } from '../Pares';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-graficas',
@@ -8,10 +13,46 @@ import { Color, Label} from 'ng2-charts';
   styleUrls: ['./graficas.component.css']
 })
 export class GraficasComponent implements OnInit {
-  lineChartData: ChartDataSets[] = [
-    {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
-    {data: [87, 13, 72, 75, 17, 75], label: 'Recuperados'}
-  ];
+
+  constructor(private _service: RegistrationService, private _router: Router) { }
+
+  list: Pares[];
+  aux1: any[] = [87, 13, 72, 75, 17, 75];
+  aux2: any[] = [87, 13, 72, 75, 17, 75];
+
+  ngOnInit(): void {
+    this.ObtenerDatos();
+  }
+
+  ObtenerDatos(){
+    
+    this._service.listCantidadEnfermosMes(localStorage.getItem("idDoctor")).subscribe( data => {this.list=data
+      console.log(data);
+      this.aux1 = this.list;
+      });
+
+    this._service.listCantidadRecuperadosMes(localStorage.getItem("idDoctor")).subscribe(
+      data => {this.list=data;
+      this.aux2 = this.list;
+      });   
+
+  }
+
+  shuffeData(){
+    this.ObtenerDatos();
+    this.lineChartData1 = [
+    {data: this.aux1, label: 'Enfermos'},
+    {data: this.aux2, label: 'Recuperados'}
+    ];
+
+    this.lineChartData = [
+      {data: this.aux1, label: 'Enfermos'},
+      {data: this.aux2, label: 'Recuperados'}
+    ];
+    
+  }
+  
+
 
   linerChartLabels: Label[] = ['Octubre', 'Noviembre', 'Diciembre', 'Enero', 'Febrero', 'Marzo'];
 
@@ -27,7 +68,18 @@ export class GraficasComponent implements OnInit {
   lineChartType = 'bar';
   lineChartPlugins = [];
 
+
+
+
+
+
+
   lineChartData1: ChartDataSets[] = [
+    {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
+    {data: [87, 13, 72, 75, 17, 75], label: 'Recuperadoss'}
+  ];
+
+  lineChartData: ChartDataSets[] = [
     {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
     {data: [87, 13, 72, 75, 17, 75], label: 'Recuperadoss'}
   ];
@@ -46,20 +98,8 @@ export class GraficasComponent implements OnInit {
   lineChartPlugins1 = [];
 
 
-  constructor() { }
+ 
 
-  ngOnInit(): void {
-  }
-
-  shuffeData(){
-    this.lineChartData = [
-      {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
-      {data: [87, 13, 72, 75, 17, 75], label: 'Recuperados'}
-    ];
-    this.lineChartData1 = [
-      {data: [12, 72, 78, 75, 17, 75], label: 'Enfermos'},
-      {data: [87, 13, 72, 75, 17, 75], label: 'Recuperados'}
-    ];
-  }
+  
 
 }

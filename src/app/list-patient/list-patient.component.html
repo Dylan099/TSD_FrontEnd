@@ -10,18 +10,6 @@
       <h2 class="main__title">Lista de Pacientes</h2>
       <input type="text" class="input" name="filterPost" placeholder="Buscar paciente" [(ngModel)]="filterPost">
    </section>
-   <h2>Seleccione</h2>
-   <mat-form-field >
-      <mat-label>Seleccione</mat-label>
-      <mat-select [(ngModel)]="selectedItem">
-         <mat-option *ngFor="let sexo of generos" [value]="sexo.name">
-            {{sexo.name}}
-         </mat-option>
-      </mat-select>
-     
-   </mat-form-field>
-   <button  class="btn btn-primary" >Seleccionar</button>
-   <h3>Selecciono: {{selectedItem}}</h3>
 
    <div class="table__list" >
       <button  type="submit" class="button" [routerLink]="['/listpatient']">Descargar</button>
@@ -67,7 +55,7 @@
                 <td>{{p.idPaciente}}</td>
                 <td>{{p.firstName}}</td>
                 <td>{{p.lastName}}</td>
-                <td>{{p.lastStatus}}</td>
+                <td>{{p.idStatus}}</td>
                 <td><button class="btn btn-primary" (click)="detalle(p.idPaciente)">Detalle</button></td>
               </tbody> 
            </table>

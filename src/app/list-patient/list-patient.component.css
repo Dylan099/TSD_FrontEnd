@@ -2,12 +2,12 @@ body {
   margin: 0;
   font-family: 'Muli', sans-serif;
   background: hsla(136, 82%, 72%, 1);
+  width: 100%;
+background: linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 200%);
 
-background: linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 100%);
+background: -moz-linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 200%);
 
-background: -moz-linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 100%);
+background: -webkit-linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 200%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7ef29d", endColorstr="#4AB1A3", GradientType=1 );
 }

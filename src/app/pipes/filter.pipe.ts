@@ -18,6 +18,8 @@ export class FilterPipe implements PipeTransform {
         resultPost.push(post);
       }else if(post.username.toLowerCase().indexOf(arg) > -1){
         resultPost.push(post);
+      }else if(post.idStatus.toLowerCase().indexOf(arg) > -1){
+        resultPost.push(post);
       }
 
     }

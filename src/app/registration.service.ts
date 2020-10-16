@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { Doctor } from './doctor';
 import { Subscrition } from './subscrition';
 import { Sintomas } from './sintomas';
+import { Mensaje } from './mensaje';
+import { Pares } from './Pares';
 
 @Injectable({
   providedIn: 'root'
@@ -50,6 +52,14 @@ export class RegistrationService {
   }
   listaResultadoFromRemote(id){
     return this._http.get<Sintomas[]>(this.URL4+"/"+id);
+  }
+
+  listCantidadEnfermosMes(id){
+    return this._http.get<Pares[]>("http://localhost:8080/graficosX"+"/"+id);
+  }
+
+  listCantidadRecuperadosMes(id){
+    return this._http.get<Pares[]>("http://localhost:8080/graficosY"+"/"+id);
   }
   
 }
