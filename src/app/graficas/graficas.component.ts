@@ -46,6 +46,31 @@ export class GraficasComponent implements OnInit {
 
 
 
+
+
+
+    this._service.graficaContagiadosValor1(localStorage.getItem("idDoctor")).subscribe( 
+      data => {this.numeroX=data
+      console.log(data);
+      this.aux1 = this.list;
+      });
+
+    this._service.graficaContagiadosValor2(localStorage.getItem("idDoctor")).subscribe(
+      data => {this.numeroY=data;
+      this.aux2 = this.list;
+      });  
+
+    this.lineChartData = [
+      {data: this.aux1, label: 'Sanos'},
+      {data: this.aux2, label: 'Contagiados'}
+    ];
+    
+
+
+
+    
+
+
     this._service.graficaContagiadosSexoMasculino(localStorage.getItem("idDoctor")).subscribe( 
       data => {this.numeroX=data
       console.log(data);
@@ -57,10 +82,13 @@ export class GraficasComponent implements OnInit {
       this.aux2 = this.list;
       });  
 
+      
     this.lineChartData2 = [
       {data: this.aux1, label: 'Contagiados Femenino'},
       {data: this.aux2, label: 'Contagiados Masculino'}
     ];
+
+
 
 
     this._service.graficaContagiadosFechaValor1(localStorage.getItem("idDoctor")).subscribe( 
