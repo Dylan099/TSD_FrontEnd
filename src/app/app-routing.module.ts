@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DetalleComponent } from './detalle/detalle.component';
 import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 import { DownloadComponent } from './download/download.component';
+import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
@@ -72,6 +73,10 @@ const routes: Routes = [
   {
     path: 'detalle',
     component:DetalleComponent
+  },
+    {
+    path: 'editPatient',
+    component:EditPatientComponent
   }
 ];
 

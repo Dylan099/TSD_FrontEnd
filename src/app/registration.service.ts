@@ -20,6 +20,16 @@ export class RegistrationService {
   URL3 = "http://localhost:8080/api/buscarFemenino"
   URL4 = "http://localhost:8080/resultados"
 
+
+  public getPatient( id):Observable<any>{
+    return this._http.get<Patient>("http://localhost:8080/editPatient"+"/"+id);
+  }
+
+  public updatePatient(patient: Patient):Observable<any>{
+    return this._http.put<Patient>("http://localhost:8080/editPatient"+"/"+patient.idPaciente,patient);
+  }
+
+
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
   }

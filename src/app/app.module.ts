@@ -26,6 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { ChartsModule } from 'ng2-charts';
+import { EditPatientComponent } from './edit-patient/edit-patient.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { ChartsModule } from 'ng2-charts';
     DetalleComponent,
     ResultadosComponent,
     GraficasComponent,
+    EditPatientComponent,
     
   ],
   imports: [
