@@ -68,6 +68,11 @@ export class RegistrationService {
   OrdgenGetbyId(id){
     return this._http.get<Sintomas[]>(this.URL2+"/"+id);
   }
+
+  OrdgenGetbyIdPDF(id){
+    return this._http.get<any>("http://localhost:8080/api/searchTimeLinePDF"+"/"+id);
+  }
+
   buscarfemenino(idF){
     return this._http.get<Patient[]>(this.URL3+"/"+idF);
   }

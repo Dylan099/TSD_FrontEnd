@@ -38,9 +38,9 @@ constructor(private _service: RegistrationService, private _router: Router) { }
   }
   showModal(){
     Swal.fire({
-      position: 'top-end',
+      position: 'top',
       icon: 'success',
-      title: 'Your work has been saved',
+      title: 'Tu cambio se ha guardado',
       showConfirmButton: false,
       timer: 1500
     })
