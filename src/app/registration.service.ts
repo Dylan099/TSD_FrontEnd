@@ -29,6 +29,10 @@ export class RegistrationService {
     return this._http.put<Patient>("http://localhost:8080/editPatient"+"/"+patient.idPaciente,patient);
   }
 
+  public deletePatient(patient: Patient):Observable<any>{
+    return this._http.put<Patient>("http://localhost:8080/editPatient"+"/deletePatient/"+patient.idPaciente,patient);
+  }
+
   
   public getDoctor( id):Observable<any>{
     return this._http.get<Doctor>("http://localhost:8080/editDoctor"+"/"+id);
@@ -38,6 +42,9 @@ export class RegistrationService {
     return this._http.put<Doctor>("http://localhost:8080/editDoctor"+"/"+doctor.idDoctor,doctor);
   }
 
+  public deleteDoctor(doctor: Doctor):Observable<any>{
+    return this._http.put<Doctor>("http://localhost:8080/editDoctor"+"/deleteDoctor/"+doctor.idDoctor,doctor);
+  }
 
 
 

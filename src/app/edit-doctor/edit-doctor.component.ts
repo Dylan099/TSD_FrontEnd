@@ -23,26 +23,75 @@ constructor(private _service: RegistrationService, private _router: Router) { }
       this.doctor = data;
     });
   }
-
+ 
   updateUser(){
+    this.doctor = this.doctor
+  }
+
+  editShow(){
     this._service.updateDoctor(this.doctor).subscribe(
       data => {
+
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Tus cambios han sido guardados',
+          showConfirmButton: false,
+          timer: 1500
+        })
+
         console.log("response recieved");
         this._router.navigate(['/loginsuccess'])
       },
       error =>{
+         
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: 'Tus cambios NO han sido guardados',
+          showConfirmButton: false,
+          timer: 1500
+        })
+
         console.log("exception ocurred");
-        this.msg = error.error;
+         this.msg = error.error;
         }
     )
   }
-  showModal(){
+
+  deleteShow(){
     Swal.fire({
-      position: 'top',
-      icon: 'success',
-      title: 'Tu cambio se ha guardado',
-      showConfirmButton: false,
-      timer: 1500
+      title: 'Esta seguro?',
+      text: "Esta cuenta se eliminara!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        this._service.deleteDoctor(this.doctor).subscribe(
+          data => {
+            Swal.fire(
+              'Cuenta Eliminada!'
+            )
+            this._router.navigate([''])
+          },
+          error =>{
+            Swal.fire(
+              'Error!'
+            )
+            console.log("exception ocurred");
+             this.msg = error.error;
+            }
+        )
+
+      }
     })
   }
+
 }
+
+
+
