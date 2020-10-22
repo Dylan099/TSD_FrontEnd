@@ -29,6 +29,17 @@ export class RegistrationService {
     return this._http.put<Patient>("http://localhost:8080/editPatient"+"/"+patient.idPaciente,patient);
   }
 
+  
+  public getDoctor( id):Observable<any>{
+    return this._http.get<Doctor>("http://localhost:8080/editDoctor"+"/"+id);
+  }
+
+  public updateDoctor(doctor: Doctor):Observable<any>{
+    return this._http.put<Doctor>("http://localhost:8080/editDoctor"+"/"+doctor.idDoctor,doctor);
+  }
+
+
+
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);

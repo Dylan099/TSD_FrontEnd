@@ -27,6 +27,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { ChartsModule } from 'ng2-charts';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
+import { EditDoctorComponent } from './edit-doctor/edit-doctor.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { EditPatientComponent } from './edit-patient/edit-patient.component';
     ResultadosComponent,
     GraficasComponent,
     EditPatientComponent,
+    EditDoctorComponent,
     
   ],
   imports: [
