@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Mensaje } from '../mensaje';
+import { RegistrationService } from '../registration.service';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-loginsuccess',
@@ -9,9 +13,35 @@ import { Mensaje } from '../mensaje';
 export class LoginsuccessComponent implements OnInit {
 
   mensaje: Mensaje[];
-  constructor() { }
+  constructor(private _service:RegistrationService, private _router:Router) { }
 
   ngOnInit(): void {
+    this.NuevasRecom();
+  }
+
+  NuevasRecom(){
+    this._service.newRecom(localStorage.getItem("idPaciente")).subscribe(
+      data => {
+        if(data > 0)
+        {
+          Swal.fire({
+            title: 'Tienes '+data+" nuevas recomendaciones",
+            width: 600,
+            padding: '3em',
+            background: '#ffff',
+            backdrop: `
+              rgb(128,208,199,0.6)
+              left top
+              no-repeat
+            `
+          })
+
+        }
+      },
+      error =>{
+        console.log("exception ocurred");
+        }
+    );
   }
 
 }

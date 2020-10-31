@@ -47,6 +47,10 @@ export class RegistrationService {
   }
 
 
+  public newRecom( id):Observable<any>{
+    return this._http.get<number>("http://localhost:8080/findnewrecomendacion"+"/"+id);
+  }
+
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
