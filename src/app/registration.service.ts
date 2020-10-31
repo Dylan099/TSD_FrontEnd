@@ -66,18 +66,26 @@ export class RegistrationService {
   listPatientGetFromRemote(id){
     return this._http.get<Patient[]>(this.URL+"/"+id);
   }
-  listPatientPDFGetFromRemote(){
-    return this._http.get<any>(this.URL1);
+
+  listPatientPDFGetFromRemote(id){
+    return this._http.get("http://localhost:8080/listpatientPDF"+"/"+id, {responseType: 'blob'});
   }
+
   public sintomasFromRemoter(sintomas: Sintomas, id):Observable<any>{
-    return this._http.post<any>("http://localhost:8080/sintomasPa"+"/"+id,sintomas)
+    return this._http.post<any>("http://localhost:8080/sintomasPa"+"/"+id,sintomas);
   }
+
+  public sintomasFromRemoterPDF(id):Observable<any>{
+    return this._http.get("http://localhost:8080/testPDF"+"/"+id,{responseType: 'blob'});
+  }
+  
   OrdgenGetbyId(id){
     return this._http.get<Sintomas[]>(this.URL2+"/"+id);
   }
 
+  
   OrdgenGetbyIdPDF(id){
-    return this._http.get<any>("http://localhost:8080/api/searchTimeLinePDF"+"/"+id);
+    return this._http.get("http://localhost:8080/api/searchTimeLinePDF"+"/"+id,{responseType: 'blob'});
   }
 
   buscarfemenino(idF){

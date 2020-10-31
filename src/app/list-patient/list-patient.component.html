@@ -12,7 +12,8 @@
    </section>
 
    <div class="table__list" >
-      <button  type="submit" class="button" [routerLink]="['/listpatient']">Descargar</button>
+      <button class="btn btn-primary" (click)="listpatientPDF()">Descargar</button>
+
        <mat-tab-group>
         <mat-tab label="Lista Pacientes">
             <table id="myTable" class="table table-striped">

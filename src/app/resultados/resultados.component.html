@@ -1,6 +1,8 @@
 <div class="table__list" >
-    <button  type="submit" class="button" [routerLink]="['/resultado']">Descargar</button>
-     <mat-tab-group>
+  <button (click)="descargarA()" class="button">Descargar resultado actual</button>
+  <button (click)="descargarH()" class="button">Descargar historial de resultados</button>
+
+  <mat-tab-group>
       <mat-tab label="Sintomas">
           <table id="myTable" class="table table-striped">
               <thead>

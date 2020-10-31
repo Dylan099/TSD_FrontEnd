@@ -17,7 +17,7 @@ export class DownloadComponent implements OnInit {
     this.DatosPDF();
   }
   DatosPDF(){
-    this._service.listPatientPDFGetFromRemote().subscribe(
+    this._service.listPatientPDFGetFromRemote(localStorage.getItem("idDoctor")).subscribe(
       data => this._router.navigate(['/listpatient'])
       );
   }

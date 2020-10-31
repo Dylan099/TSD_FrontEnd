@@ -25,10 +25,25 @@ export class ListPatientComponent implements OnInit {
     {name: 'Masculino'}
   ];
 
-  DatosFemenino(){
-    this._service.buscarfemenino(localStorage.getItem("idDoctor")).subscribe(
-      data=> this.generos=data);
-      this.aux = this.listpatient;
+  listpatientPDF(){
+    this._service.listPatientPDFGetFromRemote(localStorage.getItem("idDoctor")).subscribe(
+      x => {
+        const blob = new Blob ([x], {type: 'application/pdf'});
+        if (window.navigator && window.navigator.msSaveOrOpenBlob){
+          window.navigator.msSaveOrOpenBlob(blob);
+          return;
+        }
+        const data = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = data;
+        link.download = 'lista.pdf';
+        link.dispatchEvent( new MouseEvent('click', {bubbles: true, cancelable: true, view: window}));
+
+        setTimeout(function(){
+          window.URL.revokeObjectURL(data);
+          link.remove();
+        }, 100);
+      });
   }
 
   
@@ -37,7 +52,7 @@ export class ListPatientComponent implements OnInit {
     this.ObtenerDatos();
   }
   ObtenerDatos(){
-    
+
     this._service.listPatientGetFromRemote(localStorage.getItem("idDoctor")).subscribe(
       data => this.listpatient=data);
       this.aux = this.listpatient;   

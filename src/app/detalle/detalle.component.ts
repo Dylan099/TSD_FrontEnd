@@ -43,10 +43,25 @@ export class DetalleComponent implements OnInit {
 
   descargar(){
     this._service.OrdgenGetbyIdPDF(localStorage.getItem("idPaciente")).subscribe(
-      data=>{
-        this.msg=data;
-        console.log(data);
-      })
+      x => {
+        const blob = new Blob ([x], {type: 'application/pdf'});
+        if (window.navigator && window.navigator.msSaveOrOpenBlob){
+          window.navigator.msSaveOrOpenBlob(blob);
+          return;
+        }
+        const data = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = data;
+        link.download = 'sintomas_paciente.pdf';
+        link.dispatchEvent( new MouseEvent('click', {bubbles: true, cancelable: true, view: window}));
+
+        setTimeout(function(){
+          window.URL.revokeObjectURL(data);
+          link.remove();
+        }, 100);
+      });
   }
+
+  
 
 }
