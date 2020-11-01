@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Doctor } from '../doctor';
-import { RegistrationService } from '../registration.service';
+import { Doctor } from 'src/app/Modelos/ModeloDoctor/ModeloDoct/doctor';
+
+import { RegistrationService } from 'src/app/registration.service';
+
+
 
 @Component({
   selector: 'app-doctor-view',

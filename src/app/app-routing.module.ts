@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DetalleComponent } from './detalle/detalle.component';
-import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+
 import { DownloadComponent } from './download/download.component';
 import { EditDoctorComponent } from './edit-doctor/edit-doctor.component';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
@@ -9,12 +9,14 @@ import { GraficasComponent } from './graficas/graficas.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { LoginComponent } from './login/login.component';
-import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { SintomasComponent } from './sintomas/sintomas.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
+import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
 
 
 

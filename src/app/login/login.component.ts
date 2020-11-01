@@ -2,7 +2,8 @@ import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Patient } from '../patient';
+import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
+
 import { RegistrationService } from '../registration.service';
 
 @Component({

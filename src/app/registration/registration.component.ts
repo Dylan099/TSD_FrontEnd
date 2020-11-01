@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Patient } from '../patient';
+
 import { RegistrationService } from '../registration.service';
 import Swal from 'sweetalert2';
+import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
 
 @Component({
   selector: 'app-registration',

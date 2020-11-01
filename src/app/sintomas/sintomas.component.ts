@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegistrationService } from '../registration.service';
-import { Sintomas } from '../sintomas';
+
 import { NgForm } from '@angular/forms';
 import { FormBuilder, Validators } from "@angular/forms";
 import { Mensaje } from '../mensaje';
+import { Sintomas } from '../Modelos/ModeloDoctor/Sintomas/sintomas';
 
 @Component({
   selector: 'app-sintomas',

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Doctor } from '../doctor';
-import { Patient } from '../patient';
+import { Doctor } from '../Modelos/ModeloDoctor/ModeloDoct/doctor';
+import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
+
 import { RegistrationService } from '../registration.service';
 
 @Component({

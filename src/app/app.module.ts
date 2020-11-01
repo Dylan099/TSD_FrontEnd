@@ -6,9 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
-import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
@@ -27,6 +27,8 @@ import { GraficasComponent } from './graficas/graficas.component';
 import { ChartsModule } from 'ng2-charts';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { EditDoctorComponent } from './edit-doctor/edit-doctor.component';
+import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
+import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
 
 
 @NgModule({

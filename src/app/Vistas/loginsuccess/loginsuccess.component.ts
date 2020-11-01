@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Mensaje } from '../mensaje';
+import { Mensaje } from 'src/app/mensaje';
 
 @Component({
   selector: 'app-loginsuccess',

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegistrationService } from '../registration.service';
-import { Sintomas } from '../sintomas';
+
 import Swal from 'sweetalert2';
+import { Sintomas } from '../Modelos/ModeloDoctor/Sintomas/sintomas';
 
 @Component({
   selector: 'app-detalle',

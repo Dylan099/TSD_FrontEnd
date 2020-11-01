@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Patient } from './patient';
 import { HttpClient } from '@angular/common/http';
-import { Doctor } from './doctor';
 import { Subscrition } from './subscrition';
-import { Sintomas } from './sintomas';
 import { Mensaje } from './mensaje';
 import { Pares } from './Pares';
+import { Patient } from './Modelos/ModeloDoctor/ModeloPatient/patient';
+import { Doctor } from './Modelos/ModeloDoctor/ModeloDoct/doctor';
+import { Sintomas } from './Modelos/ModeloDoctor/Sintomas/sintomas';
 
 @Injectable({
   providedIn: 'root'
