@@ -29,6 +29,7 @@ import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { EditDoctorComponent } from './edit-doctor/edit-doctor.component';
 import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
 import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
+import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component'
     GraficasComponent,
     EditPatientComponent,
     EditDoctorComponent,
+    RecomendacionesComponent,
     
   ],
   imports: [
