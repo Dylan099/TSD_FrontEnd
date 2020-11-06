@@ -16,6 +16,7 @@ export class EditDoctorComponent implements OnInit {
 
 doctor = new Doctor();
 msg = '';
+pss: string;
 constructor(private _service: RegistrationService, private _router: Router) { }
  
   ngOnInit(): void {
@@ -90,6 +91,16 @@ constructor(private _service: RegistrationService, private _router: Router) { }
 
       }
     })
+  }
+
+  doubleAuth(){
+    this._service.change_doubleAuth(localStorage.getItem("idDoctor")).subscribe(
+      data=>{
+        this.pss=data;
+        console.log(data);
+
+        Swal.fire('La doble autenticacion se hace mediante telegram \n Ingrese el codigo ' + this.pss + ' a tallersis en telegram') 
+      });
   }
 
 }

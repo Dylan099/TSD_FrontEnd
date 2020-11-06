@@ -58,6 +58,16 @@ export class RegistrationService {
     return this._http.get<string[]>("http://localhost:8080/findhrecomendacion"+"/"+id);
   }
 
+  public change_doubleAuth( id):Observable<any>{
+    return this._http.get<string>("http://localhost:8080/Account/doubleAuth"+"/"+id);
+  }
+  public doubleAuth( id):Observable<any>{
+    return this._http.get<string>("http://localhost:8080/loginDoc/doubleAuth/"+"/"+id);
+  }
+  public doubleAuthCode( id, code):Observable<any>{
+    return this._http.get<string>("http://localhost:8080/loginDoc/doubleAuth/"+"/"+id+"/"+code);
+  }
+
 
   public loginUserFromRemote(patient: Patient):Observable<any>{
     return this._http.post<any>("http://localhost:8080/login",patient);
