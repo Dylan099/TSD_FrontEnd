@@ -30,6 +30,7 @@ import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.compon
 import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
 import { EditPatientComponent } from './Configuraciones/edit-patient/edit-patient.component';
 import { EditDoctorComponent } from './Configuraciones/edit-doctor/edit-doctor.component';
+import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { EditDoctorComponent } from './Configuraciones/edit-doctor/edit-doctor.c
     GraficasComponent,
     EditPatientComponent,
     EditDoctorComponent,
+    RecomendacionesComponent,
     
   ],
   imports: [

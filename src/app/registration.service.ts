@@ -46,9 +46,26 @@ export class RegistrationService {
     return this._http.put<Doctor>("http://localhost:8080/editDoctor"+"/deleteDoctor/"+doctor.idDoctor,doctor);
   }
 
+  public enviarrecomendacion( id, recomendacionRequest: string):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/enviarrecomendacion"+"/"+id, recomendacionRequest);
+  }
 
   public newRecom( id):Observable<any>{
     return this._http.get<number>("http://localhost:8080/findnewrecomendacion"+"/"+id);
+  }
+
+  public recomendacionesList( id):Observable<any>{
+    return this._http.get<string[]>("http://localhost:8080/findhrecomendacion"+"/"+id);
+  }
+
+  public change_doubleAuth( id):Observable<any>{
+    return this._http.get<string>("http://localhost:8080/Account/doubleAuth"+"/"+id);
+  }
+  public doubleAuth( id):Observable<any>{
+    return this._http.get<string>("http://localhost:8080/loginDoc/doubleAuth/"+"/"+id);
+  }
+  public doubleAuthCode( id, code):Observable<any>{
+    return this._http.get<string>("http://localhost:8080/loginDoc/doubleAuth/"+"/"+id+"/"+code);
   }
 
 

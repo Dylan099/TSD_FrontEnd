@@ -18,6 +18,7 @@ import { SintomasComponent } from './sintomas/sintomas.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
 import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
+import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 
 
 
@@ -85,6 +86,10 @@ const routes: Routes = [
   {
     path: 'editDoctor',
     component:EditDoctorComponent
+  },
+  {
+    path: 'recomendaciones',
+    component:RecomendacionesComponent
   }
 ];
 

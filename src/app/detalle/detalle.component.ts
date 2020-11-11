@@ -63,6 +63,35 @@ export class DetalleComponent implements OnInit {
       });
   }
 
+  enviar_recomendaciones(){
+    Swal.fire({
+      title: 'Enviale una recomendacion',
+      input: 'text',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Enviar',
+      showLoaderOnConfirm: true,
+
+      preConfirm: (recomendacionRequest) => {
+        if (recomendacionRequest == ''){
+          Swal.showValidationMessage(
+            `Debe llenar los campos`
+        )}
+        else{
+          this._service.enviarrecomendacion(localStorage.getItem("idPaciente"),recomendacionRequest).subscribe()
+        }
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: `Recomendacion enviada`,
+        })
+      }
+    })
+  }
   
 
 }

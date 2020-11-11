@@ -9,6 +9,8 @@
   <div class="table__list">
     <button  type="submit" class="button" [routerLink]="['/listpatient']">Volver</button>
     <button (click)="descargar()" class="button">Descargar datos</button>
+    <button (click)="enviar_recomendaciones()" class="button">Enviar recomendaciones </button>
+
     <mat-tab-group>
       <mat-tab label="Lista Pacientes">
         <table id="myTable" class="table table-striped">

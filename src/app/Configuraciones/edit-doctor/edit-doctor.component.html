@@ -42,6 +42,7 @@
                 <input class="input" type="password" placeholder="Contraseña" name="password" [(ngModel)]="doctor.pass" #password="ngModel" required
                 [class.is-invalid]="password.invalid && password.touched">
                 <small class="text-danger" [class.d-none]="password.valid || password.untouched">Debe ingresar una contraseña</small>
+                <button (click)="doubleAuth()" class="button">Activar doble autenticacion</button>
                 <button (click)="editShow()" class="button">Actualizar datos</button>
                 <button (click)="deleteShow()" class="button">Eliminar cuenta</button>
                 </form>
