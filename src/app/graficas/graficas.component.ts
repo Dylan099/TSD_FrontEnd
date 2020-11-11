@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
 import { Color, Label} from 'ng2-charts';
-import { Mensaje } from '../mensaje';
+import { Mensaje } from '../Modelos/ModeloDoctor/mensajes/mensaje';
 import { RegistrationService } from '../registration.service';
 import { Router } from '@angular/router';
 import { Pares } from '../Pares';

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { EditDoctorComponent } from './Configuraciones/edit-doctor/edit-doctor.component';
+import { EditPatientComponent } from './Configuraciones/edit-patient/edit-patient.component';
 import { DetalleComponent } from './detalle/detalle.component';
 
 import { DownloadComponent } from './download/download.component';
-import { EditDoctorComponent } from './edit-doctor/edit-doctor.component';
-import { EditPatientComponent } from './edit-patient/edit-patient.component';
+
 import { GraficasComponent } from './graficas/graficas.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { LoginDoctorComponent } from './login-doctor/login-doctor.component';

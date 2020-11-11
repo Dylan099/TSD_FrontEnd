@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Subscrition } from './subscrition';
-import { Mensaje } from './mensaje';
+import { Mensaje } from './Modelos/ModeloDoctor/mensajes/mensaje';
 import { Pares } from './Pares';
 import { Patient } from './Modelos/ModeloDoctor/ModeloPatient/patient';
 import { Doctor } from './Modelos/ModeloDoctor/ModeloDoct/doctor';

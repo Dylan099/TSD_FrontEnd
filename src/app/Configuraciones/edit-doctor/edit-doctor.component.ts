@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { RegistrationService } from '../registration.service';
+
 import Swal from 'sweetalert2';
-import { Doctor } from '../Modelos/ModeloDoctor/ModeloDoct/doctor';
+import { Doctor } from 'src/app/Modelos/ModeloDoctor/ModeloDoct/doctor';
+import { RegistrationService } from 'src/app/registration.service';
+
 
 
 @Component({
@@ -26,7 +28,7 @@ constructor(private _service: RegistrationService, private _router: Router) { }
   }
  
   updateUser(){
-    this.doctor = this.doctor
+    this.doctor = this.doctor;
   }
 
   editShow(){

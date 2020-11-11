@@ -25,10 +25,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { ChartsModule } from 'ng2-charts';
-import { EditPatientComponent } from './edit-patient/edit-patient.component';
-import { EditDoctorComponent } from './edit-doctor/edit-doctor.component';
+
 import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
 import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
+import { EditPatientComponent } from './Configuraciones/edit-patient/edit-patient.component';
+import { EditDoctorComponent } from './Configuraciones/edit-doctor/edit-doctor.component';
 
 
 @NgModule({

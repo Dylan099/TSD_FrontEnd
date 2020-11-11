@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Mensaje } from 'src/app/mensaje';
+import { Mensaje } from 'src/app/Modelos/ModeloDoctor/mensajes/mensaje';
 import { RegistrationService } from 'src/app/registration.service';
 import Swal from 'sweetalert2';
 

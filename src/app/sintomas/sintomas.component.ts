@@ -4,7 +4,7 @@ import { RegistrationService } from '../registration.service';
 
 import { NgForm } from '@angular/forms';
 import { FormBuilder, Validators } from "@angular/forms";
-import { Mensaje } from '../mensaje';
+import { Mensaje } from '../Modelos/ModeloDoctor/mensajes/mensaje';
 import { Sintomas } from '../Modelos/ModeloDoctor/Sintomas/sintomas';
 
 @Component({

@@ -1,10 +1,9 @@
   import { Component, OnInit } from '@angular/core';
   import { NgForm } from '@angular/forms';
   import { Router } from '@angular/router';
-
-  import { RegistrationService } from '../registration.service';
+  import { Patient } from 'src/app/Modelos/ModeloDoctor/ModeloPatient/patient';
+  import { RegistrationService } from 'src/app/registration.service';
   import Swal from 'sweetalert2';
-import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
 
 
 @Component({
@@ -26,8 +25,8 @@ export class EditPatientComponent implements OnInit {
     }
   
     updateUser(){
-      this.patient = this.patient
-    }
+      this.patient = this.patient;
+        }
      
     editShow(){
       this._service.updatePatient(this.patient).subscribe(
