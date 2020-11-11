@@ -1,11 +1,10 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Doctor } from '../Modelos/ModeloDoctor/ModeloDoct/doctor';
 import Swal from 'sweetalert2';
-
-import { RegistrationService } from '../registration.service';
 import { IfStmt } from '@angular/compiler';
+import { Doctor } from 'src/app/Modelos/ModeloDoctor/ModeloDoct/doctor';
+import { RegistrationService } from 'src/app/servicio/registration.service';
 
 @Component({
   selector: 'app-login-doctor',

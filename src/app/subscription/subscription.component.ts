@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RegistrationService } from '../registration.service';
-import { Subscrition } from '../subscrition';
+import { RegistrationService } from '../servicio/registration.service';
+import { Subscrition } from '../Modelos/ModeloDoctor/Subscrition/subscrition';
 
 @Component({
   selector: 'app-subscription',

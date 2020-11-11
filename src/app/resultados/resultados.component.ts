@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Sintomas } from '../Modelos/ModeloDoctor/Sintomas/sintomas';
-import { RegistrationService } from '../registration.service';
+import { RegistrationService } from '../servicio/registration.service';
 
 
 @Component({

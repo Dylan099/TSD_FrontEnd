@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RegistrationService } from '../registration.service';
+import { RegistrationService } from '../servicio/registration.service';
 
 import { NgForm } from '@angular/forms';
 import { FormBuilder, Validators } from "@angular/forms";

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { RegistrationService } from '../registration.service';
+import { RegistrationService } from '../servicio/registration.service';
 import Swal from 'sweetalert2';
 import { Doctor } from '../Modelos/ModeloDoctor/ModeloDoct/doctor';
 @Component({

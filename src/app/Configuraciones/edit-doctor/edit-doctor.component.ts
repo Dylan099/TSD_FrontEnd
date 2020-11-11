@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
 import { Doctor } from 'src/app/Modelos/ModeloDoctor/ModeloDoct/doctor';
-import { RegistrationService } from 'src/app/registration.service';
+import { RegistrationService } from 'src/app/servicio/registration.service';
 
 
 
@@ -29,7 +29,7 @@ constructor(private _service: RegistrationService, private _router: Router) { }
   }
  
   updateUser(){
-    this.doctor = this.doctor;
+    //this.doctor = this.doctor;
   }
 
   editShow(){

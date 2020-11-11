@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Mensaje } from 'src/app/Modelos/ModeloDoctor/mensajes/mensaje';
-import { RegistrationService } from 'src/app/registration.service';
+import { RegistrationService } from 'src/app/servicio/registration.service';
 import Swal from 'sweetalert2';
 
 @Component({

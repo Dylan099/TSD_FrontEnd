@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
 
-import { RegistrationService } from '../registration.service';
+import { RegistrationService } from '../servicio/registration.service';
 
 @Component({
   selector: 'app-download',

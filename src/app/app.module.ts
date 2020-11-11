@@ -2,14 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { RegisdoctComponent } from './regisdoct/regisdoct.component';
-
-import { LoginDoctorComponent } from './login-doctor/login-doctor.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -25,12 +21,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { ChartsModule } from 'ng2-charts';
-
 import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
 import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
 import { EditPatientComponent } from './Configuraciones/edit-patient/edit-patient.component';
 import { EditDoctorComponent } from './Configuraciones/edit-doctor/edit-doctor.component';
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
+import { LoginComponent } from './Logins/login/login.component';
+import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
 
 
 @NgModule({

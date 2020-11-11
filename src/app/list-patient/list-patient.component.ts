@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Doctor } from '../Modelos/ModeloDoctor/ModeloDoct/doctor';
 import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
 
-import { RegistrationService } from '../registration.service';
+import { RegistrationService } from '../servicio/registration.service';
 
 @Component({
   selector: 'app-list-patient',

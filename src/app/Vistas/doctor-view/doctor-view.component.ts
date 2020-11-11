@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Doctor } from 'src/app/Modelos/ModeloDoctor/ModeloDoct/doctor';
 
-import { RegistrationService } from 'src/app/registration.service';
+import { RegistrationService } from 'src/app/servicio/registration.service';
 
 
 
