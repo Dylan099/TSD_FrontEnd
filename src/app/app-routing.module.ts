@@ -14,8 +14,8 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 import { DoctorViewComponent } from './Vistas/doctor-view/doctor-view.component';
 import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.component';
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
-import { LoginComponent } from './Logins/login/login.component';
 import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
+import { LoginComponent } from './Logins/login/login.component';
 
 
 
