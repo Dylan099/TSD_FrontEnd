@@ -13,13 +13,15 @@
         <div >
           <div>
             <ul>
-              <li><a href=""></a>Mis Consultas</li> 
+              <li><a href="">Mis Consultas</a></li> 
               <li><a [routerLink]="['/graficos']">Graficas</a></li>
               <li><a [routerLink]="['/listpatient']">Lista de Paciente</a></li>
-              <li><a [routerLink]="['/editDoctor']">Mi cuenta</a></li>
-              <li><a [routerLink]="['/logindoctor']">Logout</a></li>
-
-              <li><a ></a></li>
+              <li><a>Mi Perfil</a>
+                <ul>
+                  <li><a [routerLink]="['/logindoctor']">Logout</a></li>
+                  <li><a [routerLink]="['/editDoctor']">Mi cuenta</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>

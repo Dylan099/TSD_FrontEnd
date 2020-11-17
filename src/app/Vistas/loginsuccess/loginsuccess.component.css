@@ -34,7 +34,7 @@ body {
   
   }
   header ul li:hover{
-    background:white;
+    background:rgb(155, 204, 226); 
   }
   header ul li:last-child
   {
@@ -49,9 +49,9 @@ body {
     position: absolute;
     top: 44px;
     left: 0;
-    background:#000;
+    background:rgb(78, 176, 206);
     display: block;
-    width: 200px;
+    width: auto;
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
