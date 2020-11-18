@@ -41,13 +41,16 @@ export class GraficasComponent implements OnInit {
   shuffeData(){
 
     this._service.graficaContagiadosEdadValor1(localStorage.getItem("idDoctor")).subscribe( data => {this.list=data
-      console.log(data);
       this.aux1 = this.list;
+      console.log("aux 1 "+this.aux2);
+
       });
 
     this._service.graficaContagiadosEdadValor2(localStorage.getItem("idDoctor")).subscribe(
       data => {this.list=data;
       this.aux2 = this.list;
+      console.log("aux 2 "+this.aux2);
+
       });  
 
     this.lineChartData1 = [
@@ -61,11 +64,16 @@ export class GraficasComponent implements OnInit {
       data => {this.numeroX=data
       console.log(data);
       this.aux11 = this.list;
+      console.log("aux 11 "+this.aux11);
+
       });
 
     this._service.graficaContagiadosValor2(localStorage.getItem("idDoctor")).subscribe(
       data => {this.numeroY=data;
       this.aux21 = this.list;
+
+      console.log("aux 21 "+this.aux21);
+
       });  
 
     this.lineChartData = [

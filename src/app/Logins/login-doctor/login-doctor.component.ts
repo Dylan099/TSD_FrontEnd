@@ -27,10 +27,9 @@ export class LoginDoctorComponent implements OnInit {
         console.log("response recieved");
         this._service.doubleAuth(data).subscribe(
           existe => {
-            console.log(existe);
-
             if (existe)
             {
+              console.log(existe);
               Swal.fire({
                 title: 'Ingresa el codigo que se te envio a telegram',
                 input: 'text',
