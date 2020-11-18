@@ -1,9 +1,19 @@
 agm-map {
-  width: 100%;
-  height: 400px;
+  width: 80%;
+  height: 500px;
   display:block;
-  margin-left: 10px;
-  margin-right: auto;
+  margin-left: auto;
+  margin-right: -200px;
+}
+
+.h3 {
+  color: white;
+  font-size: 15px;
+  margin-left: 100px;
+  text-decoration: none;
+  align-content: center;
+  vertical-align: top;
+
 }
 
 
@@ -123,10 +133,10 @@ body {
   .login {
     background-image: linear-gradient(#0093E9, #80D0C7);
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 30px;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0px 0px;
     min-height: calc(100vh - 200px); /* El ancho será igual al tamaño de todo el height menos 200px (100px del header + 100px del footer) */
   }
   
@@ -212,6 +222,8 @@ body {
     padding-left: 30px;
     text-decoration: none;
   }
+
+
   
   .footer a:hover {
     text-decoration: underline;

@@ -16,7 +16,7 @@ export class LoginsuccessComponent implements OnInit {
   hospitales: Hospital[];
   mylat: number;
   mylng: number;
-  zoom: number = 18;
+  zoom: number = 14;
   mapTyoeId: string = 'hybrid';
 
   constructor(private _service:RegistrationService, private _router:Router) { }

@@ -29,6 +29,7 @@ import { RecomendacionesComponent } from './recomendaciones/recomendaciones.comp
 import { LoginComponent } from './Logins/login/login.component';
 import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
 import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-detalle.component';
+import {AgmCoreModule } from '@agm/core';
 
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ReactivationDoctorComponent } from './reactivation-doctor/reactivation-doctor.component';
@@ -73,7 +74,10 @@ import { ReactivationPatientComponent } from './reactivation-patient/reactivatio
     MatSelectModule,
     MatFormFieldModule,
     ColorPickerModule,
-    ChartsModule
+    ChartsModule,
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
     
   ],
   providers: [],
