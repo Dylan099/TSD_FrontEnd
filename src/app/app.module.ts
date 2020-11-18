@@ -31,6 +31,8 @@ import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.compone
 import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-detalle.component';
 
 import { ColorPickerModule } from 'ngx-color-picker';
+import { ReactivationDoctorComponent } from './reactivation-doctor/reactivation-doctor.component';
+import { ReactivationPatientComponent } from './reactivation-patient/reactivation-patient.component';
 
 
 @NgModule({
@@ -55,6 +57,8 @@ import { ColorPickerModule } from 'ngx-color-picker';
     EditDoctorComponent,
     RecomendacionesComponent,
     PacienteDetalleComponent,
+    ReactivationDoctorComponent,
+    ReactivationPatientComponent,
     
   ],
   imports: [

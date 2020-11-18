@@ -167,7 +167,10 @@ export class RegistrationService {
     return this._http.put<Patient>("http://localhost:8080/editPatient"+"/deletePatient/"+patient.idPaciente,patient);
   }
 
-  
+  public reactivationPatient(patient: Patient):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/reactivationPatient",patient);
+  }
+
   public getDoctor( id):Observable<any>{
     return this._http.get<Doctor>("http://localhost:8080/editDoctor"+"/"+id);
   }
@@ -214,6 +217,10 @@ export class RegistrationService {
   }
   public loginDoctorFromRemote(doctor: Doctor):Observable<any>{
     return this._http.post<any>("http://localhost:8080/logindoctor",doctor);
+  }
+  
+  public reactivationDoctor(doctor: Doctor):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/reactivationDoctor",doctor);
   }
   
 

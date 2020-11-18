@@ -17,6 +17,8 @@ import { RecomendacionesComponent } from './recomendaciones/recomendaciones.comp
 import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
 import { LoginComponent } from './Logins/login/login.component';
 import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-detalle.component';
+import { ReactivationDoctorComponent } from './reactivation-doctor/reactivation-doctor.component';
+import { ReactivationPatientComponent } from './reactivation-patient/reactivation-patient.component';
 
 
 
@@ -92,6 +94,14 @@ const routes: Routes = [
   {
     path: 'pacienteDetalle',
     component: PacienteDetalleComponent
+  },
+  {
+    path: 'reactivationDoctor',
+    component: ReactivationDoctorComponent
+  },
+  {
+    path: 'reactivationPatient',
+    component: ReactivationPatientComponent
   }
 ];
 
