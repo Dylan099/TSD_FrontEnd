@@ -18,22 +18,21 @@ export class GraficasComponent implements OnInit {
 
   list: Pares[];
   lists: String[];
-  aux1: any[] = [87, 13, 72, 75, 17, 75];
-  aux2: any[] = [87, 13, 72, 75, 17, 75];
+  aux1: any[] = [57, 13, 14, 16, 45, 75];
+  aux2: any[] = [12, 34, 78, 56, 23, 34];
 
   
-  aux11: any[] = [87, 13, 72, 75, 17, 75];
-  aux21: any[] = [87, 13, 72, 75, 17, 75];
+  aux11: any[] = [57, 13, 14, 16, 45, 75];
+  aux21: any[] = [12, 34, 78, 56, 23, 34];
 
   
-  aux12: any[] = [87, 13, 72, 75, 17, 75];
-  aux22: any[] = [87, 13, 72, 75, 17, 75];
+  aux12: any[] = [57, 13, 14, 16, 45, 75];
+  aux22: any[] = [12, 34, 78, 56, 23, 34];
 
-  aux13: any[] = [87, 13, 72, 75, 17, 75];
-  aux23: any[] = [87, 13, 72, 75, 17, 75];
+  aux13: any[] = [57, 13, 14, 16, 45, 75];
+  aux23: any[] = [12, 34, 78, 56, 23, 34];
 
-  numeroX: Pares;
-  numeroY: Pares;
+  
 
   ngOnInit(): void {
   }
@@ -57,16 +56,16 @@ export class GraficasComponent implements OnInit {
 
 
 
-    this._service.graficaContagiadosValor1(localStorage.getItem("idDoctor")).subscribe( 
-      data => {this.numeroX=data
-      console.log(data);
-      this.aux11 = this.list;
-      });
+    // this._service.graficaContagiadosValor1(localStorage.getItem("idDoctor")).subscribe( 
+    //   data => {this.numeroX=data
+    //   console.log(data);
+    //   this.aux11 = this.list;
+    //   });
 
-    this._service.graficaContagiadosValor2(localStorage.getItem("idDoctor")).subscribe(
-      data => {this.numeroY=data;
-      this.aux21 = this.list;
-      });  
+    // this._service.graficaContagiadosValor2(localStorage.getItem("idDoctor")).subscribe(
+    //   data => {this.numeroY=data;
+    //   this.aux21 = this.list;
+    //   });  
 
     this.lineChartData = [
       {data: this.aux11, label: 'Sanos'},
@@ -79,16 +78,16 @@ export class GraficasComponent implements OnInit {
     
 
 
-    this._service.graficaContagiadosSexoMasculino(localStorage.getItem("idDoctor")).subscribe( 
-      data => {this.numeroX=data
-      console.log(data);
-      this.aux12 = this.list;
-      });
+    // this._service.graficaContagiadosSexoMasculino(localStorage.getItem("idDoctor")).subscribe( 
+    //   data => {this.numeroX=data
+    //   console.log(data);
+    //   this.aux12 = this.list;
+    //   });
 
-    this._service.graficaContagiadosSexoFemenino(localStorage.getItem("idDoctor")).subscribe(
-      data => {this.numeroY=data;
-      this.aux22 = this.list;
-      });  
+    // this._service.graficaContagiadosSexoFemenino(localStorage.getItem("idDoctor")).subscribe(
+    //   data => {this.numeroY=data;
+    //   this.aux22 = this.list;
+    //   });  
 
       
     this.lineChartData2 = [
