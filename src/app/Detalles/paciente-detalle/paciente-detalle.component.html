@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="table__list">
+    <button  type="submit" class="button" [routerLink]="['/loginsuccess']">Volver</button>
+    <button (click)="descargar()" class="button">Descargar datos</button>
+
+    <mat-tab-group>
+      <mat-tab label="Lista Pacientes">
+        <table id="myTable" class="table table-striped">
+          <thead>
+            <tr>
+                <th scope="col">dateConsulta</th>
+                <th scope="col">Problema de respiración</th>
+                <th scope="col">fiebre</th>
+                <th scope="col">dryCough</th>
+                <th scope="col">soreThroat</th>
+                <th scope="col">Problemas respiratorios</th>	
+                <th scope="col">asma</th>
+                <th scope="col">ChronicLungDisease</th>
+                <th scope="col">dolor de cabeza</th>
+                <th scope="col">heartDisease</th>
+                <th scope="col">diabetes</th>
+                <th scope="col">hipertensión</th>
+                <th scope="col">fatiga</th>
+                <th scope="col">gastrointestinal</th>
+                <th scope="col">viajes al extranjero</th>
+                <th scope="col">contac</th>
+                <th scope="col">wentLargeGathering</th>
+                <th scope="col">VisitPublicExposedPlaces</th>
+                <th scope="col">familyWorkingInPublicExposedPlaces</th>
+                <th scope="col">vistiendoMáscaras</th>
+                <th scope="col">sanitizationFromMarket</th>
+                <th scope="col">covid</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let p of sintomasdetalle">
+            <td>{{p.dateConsulta}}</td>
+            <td>{{p.breathingProblem}}</td>
+            <td>{{p.fever}}</td>
+            <td>{{p.dryCough}}</td>
+            <td>{{p.soreThroat}}</td>
+            <td>{{p.runningSe}}</td>
+            <td>{{p.asthma}}</td>
+            <td>{{p.chronicLungDisease}}</td>
+            <td>{{p.headache}}</td>
+            <td>{{p.heartDisease}}</td>
+            <td>{{p.diabetes}}</td>
+            <td>{{p.hyperTension}}</td>
+            <td>{{p.fatigue}}</td>
+            <td>{{p.gastrointestinal}}</td>
+            <td>{{p.abroadTravel}}</td>
+            <td>{{p.contactWithCovidPatient}}</td>
+            <td>{{p.attendedLargeGathering}}</td>
+            <td>{{p.visitedPublicExposedPlaces}}</td>
+            <td>{{p.familyWorkingInPublicExposedPlaces}}</td>
+            <td>{{p.wearingMasks}}</td>
+            <td>{{p.sanitizationFromMarket}}</td>
+            <td>{{p.covid}}</td>
+          </tbody> 
+        </table>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</body>
+</html>

@@ -28,6 +28,7 @@ import { EditDoctorComponent } from './Configuraciones/edit-doctor/edit-doctor.c
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 import { LoginComponent } from './Logins/login/login.component';
 import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
+import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-detalle.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.compone
     EditPatientComponent,
     EditDoctorComponent,
     RecomendacionesComponent,
+    PacienteDetalleComponent,
     
   ],
   imports: [

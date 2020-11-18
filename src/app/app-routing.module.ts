@@ -16,6 +16,7 @@ import { LoginsuccessComponent } from './Vistas/loginsuccess/loginsuccess.compon
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
 import { LoginComponent } from './Logins/login/login.component';
+import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-detalle.component';
 
 
 
@@ -87,6 +88,10 @@ const routes: Routes = [
   {
     path: 'recomendaciones',
     component:RecomendacionesComponent
+  },
+  {
+    path: 'pacienteDetalle',
+    component: PacienteDetalleComponent
   }
 ];
 
