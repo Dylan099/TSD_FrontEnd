@@ -37,6 +37,27 @@
 
       </section>
 
+      
+      <div>
+        <agm-map 
+           [latitude]="mylatitud" 
+           [longitude]="mylongitud"
+           [zoom]= "zoom">
+
+           <agm-marker *ngFor="let p of lugares"
+              [latitude]="p.latitud" 
+              [longitude]="p.longitud">
+              <agm-info-window>
+                 <p> {{ p.hospital }}  </p>
+              </agm-info-window>
+           </agm-marker>
+         
+           
+         </agm-map>
+
+     </div>
+
+
       <footer class="footer">
         <a href="/">Terminos de uso</a>
         <a href="/">Declaración de privacidad</a>

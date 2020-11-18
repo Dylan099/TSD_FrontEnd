@@ -5,6 +5,7 @@ import { Patient } from '../Modelos/ModeloDoctor/ModeloPatient/patient';
 import { Doctor } from '../Modelos/ModeloDoctor/ModeloDoct/doctor';
 import { Subscrition } from '../Modelos/ModeloDoctor/Subscrition/subscrition';
 import { Pares } from '../Pares';
+import { Hospital } from '../Hospital';
 import { Sintomas } from '../Modelos/ModeloDoctor/Sintomas/sintomas';
 
 
@@ -154,6 +155,10 @@ export class RegistrationService {
   URL3 = "http://localhost:8080/api/buscarFemenino"
   URL4 = "http://localhost:8080/resultados"
 
+
+  public getHospitales():Observable<any>{
+    return this._http.get<Hospital>("http://localhost:8080/hospitales");
+  }
 
   public getPatient( id):Observable<any>{
     return this._http.get<Patient>("http://localhost:8080/editPatient"+"/"+id);
