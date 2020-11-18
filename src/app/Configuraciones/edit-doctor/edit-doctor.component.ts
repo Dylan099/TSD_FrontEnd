@@ -45,7 +45,7 @@ constructor(private _service: RegistrationService, private _router: Router) { }
         })
 
         console.log("response recieved");
-        this._router.navigate(['/loginsuccess'])
+        this._router.navigate(['/doctorview'])
       },
       error =>{
          

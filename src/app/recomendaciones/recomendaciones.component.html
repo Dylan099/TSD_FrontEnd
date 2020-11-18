@@ -1,5 +1,53 @@
-<div *ngFor="let p of list">
-    <p>{{p}}</p>
-</div>
-<button (click)="recomendaciones()">Detalle</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
+<body>
+  
+  
+    <header>
+        <h1>Recomendaciones
+        </h1>
+          <div >
+            <div>
+              <ul>
+                <li><a [routerLink]="['/sintomasPa']">Mis Sintomas</a></li>
+                <li><a [routerLink]="['/recomendaciones']">Recomendaciones</a></li>
+                <li><a [routerLink]="['/resultados']">Mis Resultados</a></li>
+                <li><a [routerLink]="['/pacienteDetalle']">Mi Historial</a></li>              
+                <li><a >Mi Perfil</a>
+                  <ul>
+                    <li><a [routerLink]="['/subscription']">Suscribirse</a></li>
+                    <li><a [routerLink]="['/editPatient']">Mi cuenta</a></li>
+                    <li><a [routerLink]="['/login']">Logout</a>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          
+        </header>
 
+        <section class="content">
+            <br>
+            <div *ngFor="let p of list">
+                <p class="content_text">{{p}}</p>
+            </div>    
+        </section>
+
+
+
+    
+      <footer class="footer">
+        <a href="/">Terminos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+        <a href="/">Quienes somos</a>
+      </footer>
+
+</body>

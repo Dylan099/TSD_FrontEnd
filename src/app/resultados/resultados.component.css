@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    background: hsla(136, 82%, 72%, 1);
+    width: 100%;
+  background: linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 200%);
+  
+  background: -moz-linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 200%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(136, 82%, 72%, 1) 0%, hsla(172, 41%, 49%, 1) 12%, hsla(205, 84%, 36%, 1) 200%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7ef29d", endColorstr="#4AB1A3", GradientType=1 );
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+    border-radius: 0px 0px 40px 40px;
+  }
+  .input {
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: black;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
+  }
+  .main__title {
+    color: white;
+    font-size: 25px;
+  }
+  .button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    margin: 10px 0px;
+    outline: none;
+  }
+  .table__list{
+    margin: 0px 15px 15px;
+    color: white;
+  }
+  table table-striped{
+    color: white;
+  }
+  section {
+      display: table;
+    }
+    
+    .example-label {
+      display: table-cell;
+      font-size: 14px;
+      margin-left: 8px;
+      min-width: 120px;
+    }
+    
+    .example-button-row {
+      display: table-cell;
+      width: 490px;
+    }
+    
+    .example-button-row .mat-button-base {
+      margin: 8px 8px 8px 0;
+    }
+    
+    .example-flex-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    .example-button-container {
+      display: flex;
+      justify-content: center;
+      width: 120px;
+    }
