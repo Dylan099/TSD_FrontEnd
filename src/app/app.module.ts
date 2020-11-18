@@ -29,6 +29,10 @@ import { RecomendacionesComponent } from './recomendaciones/recomendaciones.comp
 import { LoginComponent } from './Logins/login/login.component';
 import { LoginDoctorComponent } from './Logins/login-doctor/login-doctor.component';
 import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-detalle.component';
+import { CategoriaComponent } from './components/categoria/categoria.component';
+import { GraficoComponent } from './components/grafico/grafico.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 
 @NgModule({
@@ -53,6 +57,9 @@ import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-d
     EditDoctorComponent,
     RecomendacionesComponent,
     PacienteDetalleComponent,
+    CategoriaComponent,
+    GraficoComponent,
+    MenuComponent,
     
   ],
   imports: [
@@ -66,6 +73,7 @@ import { PacienteDetalleComponent } from './Detalles/paciente-detalle/paciente-d
     ReactiveFormsModule,
     MatSelectModule,
     MatFormFieldModule,
+    ColorPickerModule,
     ChartsModule
     
   ],
