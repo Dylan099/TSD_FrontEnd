@@ -12,6 +12,8 @@ pipeline {
         stage('Run Start'){
             steps {
                 bat 'npm run start' 
+                bat '^C'
+                bat 'S'	
             }
         }
     }
