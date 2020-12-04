@@ -38,15 +38,15 @@
             <div *ngFor="let p of list">
                 <p class="content_text">{{p}}</p>
             </div>    
-        </section>
+          
 
 
-
-      <h3 class =h3>
+      <br><br><br>
+      <h1>
           Si te sientes mal ve a un hospital
           <br> 
           Estos hospitales estan cerca de ti!
-        </h3>
+      </h1>
         <agm-map 
            [latitude]="mylat" 
            [longitude]="mylng"
@@ -70,7 +70,9 @@
 
 
          </agm-map>
-    
+     
+        </section>
+
     
       <footer class="footer">
         <a href="/">Terminos de uso</a>
