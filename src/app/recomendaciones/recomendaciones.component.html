@@ -42,6 +42,39 @@
 
 
 
+      <h3 class =h3>
+          Si te sientes mal ve a un hospital
+          <br> 
+          Estos hospitales estan cerca de ti!
+          <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+        </h3>
+        
+        <br> 
+        <br>
+        <agm-map 
+           [latitude]="mylat" 
+           [longitude]="mylng"
+           [zoom]= "zoom">
+
+           <agm-marker *ngFor="let p of hospitales"
+              [latitude]="p.latitud" 
+              [longitude]="p.longitud"
+              [iconUrl]="{ url: 'https://www.shareicon.net/data/512x512/2016/08/04/806609_medical_512x512.png' ,scaledSize: {height:40 , width: 40 } } ">
+
+              <agm-info-window>
+                 <p> {{ p.hospital }}  </p>
+              </agm-info-window>
+           </agm-marker>
+
+           <agm-marker 
+           [latitude]="mylat" 
+           [longitude]="mylng"
+           [iconUrl]="{ url: 'https://play-lh.googleusercontent.com/VDmRjft8U-opY3txa_Q5pQKoleyVchZGCclpw0c7Dwiv2z62K19kMpOY0ZF7c9ODDbc' ,scaledSize: {height:50 , width: 40 } } ">
+        </agm-marker>
+
+
+         </agm-map>
+    
     
       <footer class="footer">
         <a href="/">Terminos de uso</a>
